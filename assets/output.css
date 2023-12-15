@@ -699,15 +699,34 @@ video {
 /*---------------------------------------------*/
 
 @media screen and (max-width: 648px) {
-  .lupinha-container {
+  .person-container {
     position: absolute;
-    right: 60px;
+    right: 65px;
     top: 45px;
     z-index: 999;
     display: block;
     cursor: pointer;
   }
 
+  .menuzin-icon-container {
+    position: absolute;
+    right: 5px;
+    top: 45px;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
+
+  .logo-brasil {
+    height: auto;
+    width: 68px;
+    position: absolute;
+    left: 26px; /* Ajuste o valor conforme necessário */
+    top: 2%;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
   .logobrasilemcena {
     margin-top: 1rem;
     display: block;
@@ -722,13 +741,12 @@ video {
 
   .menu-icon-container {
     position: absolute;
-    right: 0.625rem;
-    top: 2.5rem;
+    right: 60px;
+    top: 45px;
     z-index: 999;
     display: block;
     cursor: pointer;
   }
-
   .video-container iframe {
     margin-top: 1.25rem;
     width: 25%;
@@ -762,6 +780,17 @@ video {
     /* Remove a transformação anterior */
     /* Alinha o texto no centro */
     /* Adicione margem superior conforme necessário */
+  }
+
+
+}
+
+/*ESCONDER ICONES DOS OUTRAS TELAS*/
+@media screen and (min-width: 649px) {
+  .person-container,
+  .menuzin-icon-container,
+  .logo-brasil {
+    display: none;
   }
 }
 
