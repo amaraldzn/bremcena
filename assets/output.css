@@ -701,9 +701,9 @@ video {
 @media screen and (max-width: 648px) {
   .person-container {
     position: absolute;
-    right: 65px;
+    right: 77px;
     top: 45px;
-    z-index: 999;
+    z-index: 800;
     display: block;
     cursor: pointer;
   }
@@ -715,6 +715,11 @@ video {
     z-index: 999;
     display: block;
     cursor: pointer;
+  }
+
+  .sidebar {
+    /* ... (suas outras classes) */
+    left: 100; /* Altere para a posição desejada */
   }
 
   .logo-brasil {

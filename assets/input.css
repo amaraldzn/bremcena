@@ -328,6 +328,11 @@
  ----------------------------------
 */
 
+.sidebar {
+  /* ... (suas outras classes) */
+  left: 100; /* Altere para a posição desejada */
+}
+
   /* Navigation */
   .logobrasilemcena {
     @apply ml-[30px];

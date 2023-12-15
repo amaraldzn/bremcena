@@ -19,14 +19,163 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap" rel="stylesheet">
   <!-- FIM Imports FONTS-->
 
   <!-- Imports TAILWIND-->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FIM Imports TAILWIND-->
 
+  <!-- IMPORTS BOOTSTRAP ICONS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- IMPORTS BOOTSTRAP ICONS-->
+
+  <style>
+    .sidebar.left-0 {
+      left: initial;
+      right: 5px;
+      z-index: 999;
+    }
+
+    .menu-icon {
+      position: absolute;
+      right: 5px; /* ou ajuste para a posição desejada na direita */
+      top: 25px; /* ou ajuste para a posição desejada para baixo */
+    }
+
+    .menu-icon i {
+      font-size: 49px; /* Ajuste o tamanho do ícone conforme necessário */
+    }
+
+    @media (min-width: 649px) {
+      .sidebar {
+        display: none;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+    }
+
+    .sidebar {
+    background-image: url('images/backgrounds/backgroundbremcenasidebar.png');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+  }
+
+  </style>
+
 </head>
-<body>
+
+<body class="bg-blue-600 font-[Poppins] relative">
+  <span class="absolute text-white text-4xl cursor-pointer menu-icon" onclick="Openbar()">
+    <i class="bi bi-filter-left px-2 rounded-md menu-icon"></i>
+  </span>
+  <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000
+    p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
+    <div class="text-gray-100 text-xl">
+      <div class="p-2.5 mt-1 flex items-center rounded-md">
+        <i class="bi bi-x cursor-pointer lg:hidden" onclick="Openbar()"></i>
+        <h1 class="text-[15px] text-xl text-gray-200 font-bold">Menu </h1>
+        <iconify-icon icon="twemoji:flag-brazil" class="ml-auto text-xl"></iconify-icon>
+    </div>
+      <hr class="my-2 text-gray-600">
+
+
+      <div>
+        <div class="p-2.5 mt-3 flex items-center rounded-md 
+        px-4 duration-300 cursor-pointer  bg-black-700 border border-white">
+          <i class="bi bi-search text-sm"></i>
+          <input class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" placeholder="Pesquisar" />
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-house-door-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Página principal</span>
+        </div>
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-bookmark-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Favoritos</span>
+        </div>
+        <hr class="my-4 text-gray-600">
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-heart-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Melhores filmes</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.578 3.578 0 0 0-.108-.563 2.22 2.22 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2.35 2.35 0 0 0-.16-.045 3.797 3.797 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.552 2.552 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526l.24-2.408Zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361.599.599.437 1.732-.36 2.531Z"/>
+            <path d="M5.205 10.787a7.632 7.632 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925Z"/>
+          </svg>
+          <span class="text-[15px] ml-4 text-gray-200">Lançamentos de filmes</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-book-half"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Livros</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-tv"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Melhores Séries</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-dpad-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Novelas</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-file-earmark-person-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Documentários</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-controller"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Jogos</span>
+        </div>
+
+        <hr class="my-4 text-gray-600">
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-chat-left-text-fill"></i>
+          <div class="flex justify-between w-full items-center" onclick="dropDown()">
+            <span class="text-[15px] ml-4 text-gray-200">Contate-nos</span>
+            <span class="text-sm rotate-180" id="arrow">
+              <i class="bi bi-chevron-down"></i>
+            </span>
+          </div>
+        </div>
+        <div class="leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto hidden" id="submenu">
+          <a href="mailto:dznamaral@gmail.com"><h1 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Gmail</h1></a>
+          <a href="https://api.whatsapp.com/send/?phone=5583982018994&text&type=phone_number&app_absent=0"><h1 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Whatsapp</h1></a>
+          <a href="https://www.instagram.com/amaraldsn/"><h1 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Instagram</h1></a>
+        </div>
+
+        
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Logout</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+     function dropDown() {
+      document.querySelector('#submenu').classList.toggle('hidden');
+      document.querySelector('#arrow').classList.toggle('rotate-0');
+    }
+
+    function Openbar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('left-0');
+    }
+    
+  </script>
 
   <div id="background" class="relative"> 
     <img src="images/backgrounds/brasilemcenacapa.png" class="papeldeparede">
@@ -71,7 +220,7 @@
         </div>
       </li>
     </ul>
-  
+        
          <div class="navigation__social hidden md:flex">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
             <mask id="ipSConfig0">
@@ -121,7 +270,7 @@
             <a href="https://www.youtube.com/watch?v=Iq7cGJsGDs4"><i class="fa fa play" aria-hidden="true"></i> ▶
               Play</a>
             <a href="#"><i class="fa fa plus" aria-hidden="true"></i>+
-              My List</a>
+              Favoritos</a>
           </div>
 
           <div class="lg:hidden mx-4 my-1 ml-0">
@@ -156,7 +305,7 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Iq7cGJsGDs4?si=V2IPTRCEn9YS6Lf4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
 
-          <h2>Semelhantes | Puxa pro lado para ver mais ➜</h2>
+          <h2>Semelhantes | Passa pro lado para ver mais ➜</h2>
           <div class="carrossel overflow-x-auto">
             <img src="images/cards/bom dia veronica 2_0.jpg" alt="Bom dia Veronica">
             <img src="images/cards/historias-de-verao-netflix-serie-768x1075.jpg" alt="Historias de Verão">
@@ -184,7 +333,11 @@
           
       </main>
 
+
+      
 </body>  
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 <div class="logo-brasil">
   <img src="images/logos/Logo sem fundo.png" alt="">
@@ -197,12 +350,6 @@
     </svg>
   </a>
   
-</div>
-
-<div class="menuzin-icon-container">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7 24 24" style="width: 60px; height: 55px; color: currentColor;">
-    <path fill="currentColor" d="M1 0h5a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2m7 8h5a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2M1 4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2"/>
-  </svg>
 </div>
 
 
