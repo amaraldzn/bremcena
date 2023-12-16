@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+--------------------------------------------
+| EU NEM SEI O QUE FIZ AQUI, PQ USEI O CSS TO TAILWIND, MAS
+|
+|
+| ⚠️ AVISO: CASO TU, ANDREY OU ISAIAS, MODIFICAR ALGO AQUI DO INPUT.CSS, E NÃO MODIFICAR NADA NO SITE, TENTA TROCAR OU ADICIONAR NO OUTPUT.CSS, PORQUE PROVAVELMENTE VAI FUNCIONAR
+|
+|
+--------------------------------------------
+*/
 
 /*
   Based on TailwindCSS recommendations,
@@ -11,13 +21,11 @@
 
 /*
  --------------------------------
-| MEDIA QUEERIES (VERSÃO MOBILE) ;)
+| INÍCIO DAS MEDIAS QUEERIES (VERSÃO MOBILE) ;)
  ----------------------------------
 */
 
-/*---------------------------------------------*/
 /* MEDIA QUEERIE 388px */
-/*---------------------------------------------*/
 
 @media screen and (max-width: 388px) {
     .lupinha-container {
@@ -58,9 +66,9 @@
     }
   }
 
-/*---------------------------------------------*/
-  /* MEDIA QUEERIE 428px */
-/*---------------------------------------------*/
+
+/* MEDIA QUEERIE 428px */
+
   @media screen and (max-width: 428px) {
     .lupinha-container {
       @apply block absolute z-[999] cursor-pointer right-[60px] top-[45px];
@@ -100,9 +108,8 @@
     }
   }
 
-/*---------------------------------------------*/
-  /* MEDIA QUEERIE 648px */
-/*---------------------------------------------*/
+
+/* MEDIA QUEERIE 648px */
 
   @media screen and (max-width: 648px) {
     .lupinha-container {
@@ -142,9 +149,7 @@
     }
   }
 
-/*---------------------------------------------*/
 /* MEDIA QUEERIE 1405px (a última, slc VENCEMO */
-/*---------------------------------------------*/
 
   @media screen and (max-width: 1405px) {
     body {
@@ -211,10 +216,11 @@
     @apply text-sm text-[#777] max-w-[600px] absolute -translate-x-2/4 -translate-y-2/4 mx-auto my-[100] left-2/4 top-2/4;
   }
   
+/*---------------------------------------------*/
 /*FIM DAS MEDIAS QUEERIES*/
 /*---------------------------------------------*/
 
-  /*
+/*
  --------------------------------
 | ROOT  ;)
  ----------------------------------
@@ -372,12 +378,13 @@
  ----------------------------------
 */
 
-/* trailer */
+/* trailer FUNCIONAL */
 .video-container {
   @apply float-right absolute w-6/12 max-w-[400px] right-[100px] top-[195px];
 }
-  
-  /* trailer */
+
+/* --------------------------------------------- */
+  /* APENAS UM COMENTÁRIO, PQ TAVA TESTANDO */
   
   /* FICOU BUGADO USANDO ESSE CÓDIGO*/
   
@@ -405,6 +412,8 @@
       margin-bottom: 20px;
   } */
   
+/* --------------------------------------------- */
+
 /*
  --------------------------------
 | LOGO DO STARPLUSSSS ;)
