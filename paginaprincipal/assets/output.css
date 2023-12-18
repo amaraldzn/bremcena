@@ -1,0 +1,1345 @@
+/*
+! tailwindcss v3.3.6 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+/*
+--------------------------------------------
+| EU NEM SEI O QUE FIZ AQUI, PQ USEI O CSS TO TAILWIND, MAS
+|
+|
+| ⚠️ AVISO: CASO TU, ANDREY OU ISAIAS, MODIFICAR ALGO NO INPUT.CSS, E NÃO MODIFICAR NADA NO SITE, TENTA TROCAR OU ADICIONAR AQUI NO OUTPUT.CSS, PORQUE PROVAVELMENTE VAI
+| FUNCIONAR
+|
+|
+--------------------------------------------
+*/
+
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+/*
+ --------------------------------
+| MEDIA QUEERIES (VERSÃO MOBILE) ;)
+ ----------------------------------
+*/
+
+/*---------------------------------------------*/
+
+/* MEDIA QUEERIE 388px */
+
+/*---------------------------------------------*/
+
+@media screen and (max-width: 388px) {
+  .lupinha-container {
+    position: absolute;
+    right: 60px;
+    top: 45px;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
+
+  .logobrasilemcena {
+    margin-top: 1rem;
+    display: block;
+    height: auto;
+    width: 50px;
+  }
+
+  .menu-icon-container {
+    position: absolute;
+    right: 0.625rem;
+    top: 2.5rem;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
+
+  .main__info p {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+    max-width: 270px;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: lem;
+    font-family: "Montserrat", sans-serif;
+    word-wrap: break-word;
+  }
+
+  .direitos-autorais {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-top: 0.625rem;
+    text-align: center;
+    /* Altera a posição para relativa para remover a posição absoluta anterior */
+    transform: none;
+    /* Remove a transformação anterior */
+    /* Alinha o texto no centro */
+    /* Adicione margem superior conforme necessário */
+  }
+
+  .video-container iframe {
+    height: 200px;
+    width: 19%;
+    /* Ajuste a largura conforme necessário para 428px */
+    /* Ajuste a altura conforme necessário */
+  }
+
+  .carrossel img:not(:last-child) {
+    margin-right: 0px;
+  }
+}
+
+/*---------------------------------------------*/
+
+/* MEDIA QUEERIE 428px */
+
+/*---------------------------------------------*/
+
+@media screen and (max-width: 428px) {
+  .lupinha-container {
+    position: absolute;
+    right: 60px;
+    top: 45px;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
+
+  .logobrasilemcena {
+    margin-top: 1rem;
+    display: block;
+    height: auto;
+    width: 50px;
+  }
+
+  .menu-icon-container {
+    position: absolute;
+    right: 0.625rem;
+    top: 2.5rem;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
+
+  .main__info p {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+    max-width: 350px;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: lem;
+    font-family: "Montserrat", sans-serif;
+    word-wrap: break-word;
+  }
+
+  .direitos-autorais {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-top: 0.625rem;
+    text-align: center;
+    /* Altera a posição para relativa para remover a posição absoluta anterior */
+    transform: none;
+    /* Remove a transformação anterior */
+    /* Alinha o texto no centro */
+    /* Adicione margem superior conforme necessário */
+  }
+
+  .video-container iframe {
+    height: 200px;
+    width: 27%;
+    /* Ajuste a largura conforme necessário para 428px */
+    /* Ajuste a altura conforme necessário */
+  }
+
+  .carrossel img:not(:last-child) {
+    margin-right: 0px;
+  }
+}
+
+/*---------------------------------------------*/
+
+/* MEDIA QUEERIE 648px */
+
+/*---------------------------------------------*/
+
+@media screen and (max-width: 648px) {
+  .person-container {
+    position: absolute;
+    right: 77px;
+    top: 45px;
+    z-index: 800;
+    display: block;
+    cursor: pointer;
+  }
+
+  .menuzin-icon-container {
+    position: absolute;
+    right: 5px;
+    top: 45px;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    /* ... (suas outras classes) */
+    left: 100; /* Altere para a posição desejada */
+  }
+
+  .logo-brasil {
+    height: auto;
+    width: 68px;
+    position: absolute;
+    left: 26px; /* Ajuste o valor conforme necessário */
+    top: 2%;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
+  .logobrasilemcena {
+    margin-top: 1rem;
+    display: block;
+    height: auto;
+    width: 68px;
+  }
+
+  .navigation,
+    .navigation__social {
+    display: none;
+  }
+
+  .menu-icon-container {
+    position: absolute;
+    right: 60px;
+    top: 45px;
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+  }
+  .video-container iframe {
+    margin-top: 1.25rem;
+    width: 25%;
+    max-width: 100%;
+  }
+
+  .main__info p {
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+    max-width: 390px;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: lem;
+    font-family: "Montserrat", sans-serif;
+    word-wrap: break-word;
+    white-space: normal;
+    margin-right: 10px;
+  }
+
+  .direitos-autorais {
+    position: relative;
+    left: 4%;
+    top: auto;
+    margin-top: 1.25rem;
+    width: 20%;
+    text-align: center;
+    /* Altera a posição para relativa para remover a posição absoluta anterior */
+    transform: none;
+    /* Remove a transformação anterior */
+    /* Alinha o texto no centro */
+    /* Adicione margem superior conforme necessário */
+  }
+
+
+}
+
+/*ESCONDER ICONES DOS OUTRAS TELAS*/
+@media screen and (min-width: 649px) {
+  .person-container,
+  .menuzin-icon-container,
+  .logo-brasil {
+    display: none;
+  }
+}
+
+/*---------------------------------------------*/
+
+/* MEDIA QUEERIE 1405px (a última, slc VENCEMO */
+
+/*---------------------------------------------*/
+
+@media screen and (max-width: 1405px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* CABEÇALHO NAVIGATION */
+
+  .navigation {
+    position: relative;
+    z-index: 1;
+    margin-left: 30px;
+    display: flex;
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
+    align-items: right;
+    list-style: none;
+  }
+
+  /*RESOURCE WEB */
+
+  .video-container {
+    position: relative;
+    right: 0px;
+    top: 0px;
+    float: none;
+    margin-top: 1.25rem;
+    width: 100%;
+    max-width: none;
+    /* Remova o float para o vídeo ocupar a largura total */
+    /* Ocupa a largura total do contêiner pai */
+    /* Não há uma largura máxima fixa */
+    /* Certifica-se de que o vídeo está no topo do contêiner pai */
+    /* Ajuste conforme necessário */
+  }
+
+  /* LOGO BRASIL EM CENA*/
+
+  .logobrasilemcena {
+    display: none;
+  }
+
+  .lupinha-container {
+    display: none;
+  }
+
+  .main__info {
+    flex-direction: column;
+  }
+}
+
+#background {
+  position: fixed;
+  inset: 0px;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+}
+
+#background img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.9;
+}
+
+#overlay {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Corressel que tira minhas noites de sono */
+
+.carrossel {
+  display: flex;
+  overflow-x: auto;
+}
+
+.carrossel:hover :not(:hover) {
+  opacity: 0.3;
+}
+
+.carrossel img {
+  margin-right: 1.25rem;
+  margin-top: 1.25rem;
+  height: 300px;
+  width: 200px;
+  border-width: 0.5px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 128 0 / var(--tw-border-opacity));
+  transition-property: 0.5s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: ease-in-out;
+}
+
+.carrossel img:hover {
+  height: 20rem;
+  width: 220px;
+  --tw-translate-x: 5px;
+  --tw-translate-y: 10p;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+footer {
+  position: relative;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.direitos-autorais {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100;
+  margin-bottom: 100;
+  max-width: 600px;
+  --tw-translate-x: -50%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(119 119 119 / var(--tw-text-opacity));
+}
+
+/*
+ --------------------------------
+| ROOT  ;)
+ ----------------------------------
+*/
+
+/* papel de parede */
+
+.lupinha-container {
+  display: none;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+:root {
+  --text: #edf1f7;
+  --red: #c51212;
+  --blue: #0041c2;
+  --green: #14b02d;
+  --yellow: #ffc12b;
+}
+
+body,
+  button,
+  a {
+  color: var(--text);
+  font: 400 1rem "Mukta", sans-serif;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+.menu-icon-container {
+  display: none;
+}
+
+/* button */
+
+button:hover {
+  cursor: pointer;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*
+ --------------------------------
+| HEADER ;)
+ ----------------------------------
+*/
+
+/* Header */
+
+header {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  align-items: center;
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+  padding-top: 1.5rem;
+}
+
+header img {
+  height: auto;
+  width: 70px;
+}
+
+/*
+ --------------------------------
+| MAIN ;)
+ ----------------------------------
+*/
+
+/* main */
+
+main {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+}
+
+.main__info {
+  margin-top: 100px;
+}
+
+/* volta pra main papai */
+
+.main__info h1 {
+  font-size: 400%;
+  font-weight: 800;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.main__info .streaming h2 {
+  margin-bottom: 0.625rem;
+  margin-top: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main__info p {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+  max-width: 600px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: lem;
+  font-family: "Montserrat", sans-serif;
+  word-wrap: break-word;
+}
+
+.main__info h4 span {
+  border-right-width: 1px;
+  border-style: solid;
+  border-right-color: rgba(255,255,255,0.5);
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.main__info h4 span:first-child {
+  padding-left: 0px;
+}
+
+.main__info h4 span:last-child {
+  border-right-color: none;
+}
+
+.main__info h4 span i {
+  display: inline-block;
+  border-radius: 0.125rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-style: normal;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background: var(--green);
+}
+
+.main__info .buttons {
+  position: relative;
+}
+
+.main__info .buttons a {
+  position: relative;
+  margin-right: 0.625rem;
+  display: inline-block;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-decoration-line: none;
+  background: #14b02d;
+}
+
+.main__info .buttons a:nth-child(2) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255,255,255,0.5);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.main__info .buttons a:hover:nth-child(2) {
+  background: #14b02d;
+}
+
+/*
+ --------------------------------
+| NAVIGATION ;)
+ ----------------------------------
+*/
+
+/* Navigation */
+
+.logobrasilemcena {
+  margin-left: 30px;
+}
+
+.navigation {
+  position: relative;
+  z-index: 1;
+  margin-left: 0.625rem;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  list-style: none;
+}
+
+.navigation__link {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navigation__link::after {
+  position: absolute;
+  left: 0px;
+  bottom: -0.125rem;
+  height: 1px;
+  width: 60%;
+  transform-origin: right;
+  --tw-scale-x: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 0.4s;
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.navigation__link:hover {
+  color: var(--green);
+}
+
+.navigation__link:hover::after {
+  transform-origin: left;
+  --tw-scale-x: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  content: var(--tw-content);
+  transition-duration: 0.4s;
+}
+
+.navigation__link::after {
+  background: var(--green);
+}
+
+.navigation__social {
+  margin-left: auto;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+
+.navigation__social svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  opacity: 0.6;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 0.4s;
+}
+
+.navigation__social svg:hover {
+  --tw-translate-y: -5px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  cursor: pointer;
+  opacity: 1;
+}
+
+.dropdown {
+  position: relative;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: 2;
+  display: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--green);
+  --tw-bg-opacity: 1;
+  background-color: rgb(1 22 7 / var(--tw-bg-opacity));
+  padding: 0.625rem;
+  opacity: 0;
+  --tw-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --tw-shadow-colored: 0 2px 4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-duration: 0.5s;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.625rem;
+  color: rgba(255,255,255,0.7);
+  text-decoration-line: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--green);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+/*
+ --------------------------------
+| É O IFRAME, NO CASO, O TRAILER ;)
+ ----------------------------------
+*/
+
+/* trailer */
+
+.video-container {
+  position: absolute;
+  right: 150px;
+  top: 195px;
+  float: right;
+  width: 50%;
+  max-width: 560px;
+}
+
+/* trailer */
+
+/* FICOU BUGADO USANDO ESSE CÓDIGO*/
+
+/*.video-container {
+      margin-left: 730px;
+      margin-top: -410px;
+      width: 50%;
+      max-width: 560px; 
+      display:flex;
+      flex-direction: column;
+      align-items: flex-end;
+  } */
+
+/* FICOU BUGADO TAMBÉM
+  .video-container {
+      position: relative;
+      top: -450px;
+      left:63%;
+      transform:translateX(-50%);
+      width: 50%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 20px;
+  } */
+
+/*
+ --------------------------------
+| LOGO DO STARPLUSSSS ;)
+ ----------------------------------
+*/
+
+/* Starplusss */
+
+.starplus-logo {
+  z-index: 1;
+  height: auto;
+  width: 100px;
+  /* Ajuste o valor conforme necessário */
+}
+  
