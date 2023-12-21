@@ -1,0 +1,428 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+--------------------------------------------
+| EU NEM SEI O QUE FIZ AQUI, PQ USEI O CSS TO TAILWIND, MAS
+|
+|
+| ⚠️ AVISO: CASO TU, ANDREY OU ISAIAS, MODIFICAR ALGO AQUI DO INPUT.CSS, E NÃO MODIFICAR NADA NO SITE, TENTA TROCAR OU ADICIONAR NO OUTPUT.CSS, PORQUE PROVAVELMENTE VAI FUNCIONAR
+|
+|
+--------------------------------------------
+*/
+
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+/*
+ --------------------------------
+| INÍCIO DAS MEDIAS QUEERIES (VERSÃO MOBILE) ;)
+ ----------------------------------
+*/
+
+/* MEDIA QUEERIE 388px */
+
+@media screen and (max-width: 388px) {
+    .lupinha-container {
+      @apply block absolute z-[999] cursor-pointer right-[60px] top-[45px];
+    }
+    .logobrasilemcena {
+      @apply block w-[50px] h-auto mt-4;
+    }
+    .menu-icon-container {
+      @apply block absolute z-[999] cursor-pointer right-2.5 top-10;
+    }
+    .main__info p {
+      @apply text-[lem] font-light leading-[1.5em] max-w-[270px] mt-2.5 mb-5 mx-0;
+      font-family: "Montserrat", sans-serif;
+      word-wrap: break-word;
+    }
+    .direitos-autorais {
+      @apply relative text-center mt-2.5 left-auto top-auto;
+  
+      /* Altera a posição para relativa para remover a posição absoluta anterior */
+      transform: none;
+  
+      /* Remove a transformação anterior */
+  
+      /* Alinha o texto no centro */
+  
+      /* Adicione margem superior conforme necessário */
+    }
+    .video-container iframe {
+      @apply w-[19%] h-[200px];
+  
+      /* Ajuste a largura conforme necessário para 428px */
+  
+      /* Ajuste a altura conforme necessário */
+    }
+    .carrossel img:not(:last-child) {
+      @apply mr-0;
+    }
+  }
+
+
+/* MEDIA QUEERIE 428px */
+
+  @media screen and (max-width: 428px) {
+    .lupinha-container {
+      @apply block absolute z-[999] cursor-pointer right-[60px] top-[45px];
+    }
+    .logobrasilemcena {
+      @apply block w-[50px] h-auto mt-4;
+    }
+    .menu-icon-container {
+      @apply block absolute z-[999] cursor-pointer right-2.5 top-10;
+    }
+    .main__info p {
+      @apply text-[lem] font-light leading-[1.5em] max-w-[350px] mt-2.5 mb-5 mx-0;
+      font-family: "Montserrat", sans-serif;
+      word-wrap: break-word;
+    }
+    .direitos-autorais {
+      @apply relative text-center mt-2.5 left-auto top-auto;
+  
+      /* Altera a posição para relativa para remover a posição absoluta anterior */
+      transform: none;
+  
+      /* Remove a transformação anterior */
+  
+      /* Alinha o texto no centro */
+  
+      /* Adicione margem superior conforme necessário */
+    }
+    .video-container iframe {
+      @apply w-[27%] h-[200px];
+  
+      /* Ajuste a largura conforme necessário para 428px */
+  
+      /* Ajuste a altura conforme necessário */
+    }
+    .carrossel img:not(:last-child) {
+      @apply mr-0;
+    }
+  }
+
+
+/* MEDIA QUEERIE 648px */
+
+  @media screen and (max-width: 648px) {
+    .lupinha-container {
+      @apply block absolute z-[999] cursor-pointer right-[60px] top-[45px] block;
+    }
+    .logobrasilemcena {
+      @apply block w-[68px] h-auto mt-4;
+    }
+    .navigation,
+    .navigation__social {
+      @apply hidden;
+    }
+    .menu-icon-container {
+      @apply block absolute z-[999] cursor-pointer right-2.5 top-10;
+    }
+    .video-container iframe {
+      @apply w-3/12 max-w-full mt-5;
+    }
+    .main__info p {
+      @apply text-[lem] font-light leading-[1.5em] max-w-[390px] mt-2.5 mb-5 mx-0;
+      font-family: "Montserrat", sans-serif;
+      word-wrap: break-word;
+      white-space: normal;
+      margin-right: 10px;
+    }
+    .direitos-autorais {
+      @apply w-1/5 relative text-center mt-5 left-[4%] top-auto;
+  
+      /* Altera a posição para relativa para remover a posição absoluta anterior */
+      transform: none;
+  
+      /* Remove a transformação anterior */
+  
+      /* Alinha o texto no centro */
+  
+      /* Adicione margem superior conforme necessário */
+    }
+  }
+
+/* MEDIA QUEERIE 1405px (a última, slc VENCEMO */
+
+  @media screen and (max-width: 1405px) {
+    body {
+      @apply overflow-x-hidden;
+    }
+  
+    /* CABEÇALHO NAVIGATION */
+    .navigation {
+      @apply flex gap-x-2.5 relative z-[1] ml-[30px];
+      align-items: right;
+      list-style: none;
+    }
+  
+    /*RESOURCE WEB */
+    .video-container {
+      @apply relative float-none w-full max-w-none mt-5 right-0 top-0;
+  
+      /* Remova o float para o vídeo ocupar a largura total */
+  
+      /* Ocupa a largura total do contêiner pai */
+  
+      /* Não há uma largura máxima fixa */
+  
+      /* Certifica-se de que o vídeo está no topo do contêiner pai */
+  
+      /* Ajuste conforme necessário */
+    }
+  
+    /* LOGO BRASIL EM CENA*/
+    .logobrasilemcena {
+      @apply hidden;
+    }
+    .lupinha-container {
+      @apply hidden;
+    }
+    .main__info {
+      @apply flex-col;
+    }
+  }
+  #background {
+    @apply fixed w-full h-screen z-[-1] inset-0;
+  }
+  #background img {
+    @apply w-full h-full object-cover opacity-50;
+  }
+  #overlay {
+    @apply fixed w-full h-full bg-[rgba(0,0,0,0.9)] left-0 top-0;
+  }
+  
+  /* Corressel que tira minhas noites de sono */
+  .carrossel {
+    @apply flex overflow-x-auto;
+  }
+  .carrossel:hover :not(:hover) {
+    @apply opacity-30;
+  }
+  .carrossel img {
+    @apply w-[200px] h-[300px] transition-[0.5s] duration-[ease-in-out] mr-5 mt-5 border-[0.5px] border-solid border-[green] hover:w-[220px] hover:h-80 hover:translate-x-[5px] hover:translate-y-[10p];
+  }
+  footer {
+    @apply text-center relative mt-20;
+  }
+  .direitos-autorais {
+    @apply text-sm text-[#777] max-w-[600px] absolute -translate-x-2/4 -translate-y-2/4 mx-auto my-[100] left-2/4 top-2/4;
+  }
+  
+/*---------------------------------------------*/
+/*FIM DAS MEDIAS QUEERIES*/
+/*---------------------------------------------*/
+
+/*
+ --------------------------------
+| ROOT  ;)
+ ----------------------------------
+*/
+
+  /* papel de parede */
+  .lupinha-container {
+    @apply hidden;
+  }
+  * {
+    @apply box-border m-0 p-0;
+  }
+  :root {
+    --text: #edf1f7;
+    --red: #c51212;
+    --blue: #0041c2;
+    --green: #14b02d;
+    --yellow: #ffc12b;
+  }
+  body,
+  button,
+  a {
+    @apply text-[color:var(--text)];
+    font: 400 1rem "Mukta", sans-serif;
+  }
+  a {
+    @apply no-underline;
+  }
+  .menu-icon-container {
+    @apply hidden;
+  }
+  
+  /* button */
+  button:hover {
+    @apply cursor-pointer;
+  }
+  #app {
+    @apply flex flex-col items-center w-full h-screen;
+  }
+  
+  
+  /*
+ --------------------------------
+| HEADER ;)
+ ----------------------------------
+*/
+
+  /* Header */
+  header {
+    @apply flex items-center gap-x-16 w-full max-w-[1440px] pt-6;
+  }
+  header img {
+    @apply w-[70px] h-auto;
+  }
+  
+/*
+ --------------------------------
+| MAIN ;)
+ ----------------------------------
+*/
+
+  /* main */
+  main {
+    @apply flex-1 flex items-center justify-between w-full max-w-[1440px] pl-[30px];
+  }
+  .main__info {
+    @apply mt-[100px];
+  }
+  
+  /* volta pra main papai */
+  .main__info h1 {
+    @apply font-extrabold text-[400%];
+    font-family: "Luckiest Guy", cursive;
+    margin-bottom: 0.10em;
+  }
+  .main__info .streaming h2 {
+    @apply mb-2.5 mt-5;
+    font-family: "Montserrat", sans-serif;
+  }
+  .main__info p {
+    @apply text-[lem] font-light leading-[1.5em] max-w-[600px] mt-2.5 mb-5 mx-0;
+    font-family: "Montserrat", sans-serif;
+    word-wrap: break-word;
+  }
+  .main__info h4 span {
+    @apply px-2.5 py-0 border-r-[rgba(255,255,255,0.5)] border-r border-solid first:pl-0 last:border-r-[none];
+  }
+  .main__info h4 span i {
+    @apply text-white inline-block not-italic px-2 py-0 rounded-sm;
+    background: var(--green);
+  }
+  .main__info .buttons {
+    @apply relative;
+  }
+  .main__info .buttons a {
+    @apply relative inline-block text-white no-underline font-medium tracking-[1px] uppercase mr-2.5 px-5 py-1.5;
+    background: #14b02d;
+  }
+  .main__info .buttons a:nth-child(2) {
+    @apply border border-solid border-[rgba(255,255,255,0.5)];
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .main__info .buttons a:hover:nth-child(2) {
+    background: #14b02d;
+  }
+  
+
+/*
+ --------------------------------
+| NAVIGATION ;)
+ ----------------------------------
+*/
+
+.sidebar {
+  /* ... (suas outras classes) */
+  left: 100; /* Altere para a posição desejada */
+}
+
+  /* Navigation */
+  .logobrasilemcena {
+    @apply ml-[30px];
+  }
+  .navigation {
+    @apply flex items-center gap-x-12 relative z-[1] ml-2.5;
+    list-style: none;
+  }
+  .navigation__link {
+    @apply text-sm font-light tracking-[2px] uppercase relative hover:text-[color:var(--green)] after:content-[''] after:absolute after:w-3/5 after:h-px after:origin-right after:transition-transform after:duration-[0.4s] after:scale-x-0 after:left-0 after:-bottom-0.5 hover:after:origin-left hover:after:transition-transform hover:after:duration-[0.4s] hover:after:scale-x-100;
+  }
+  .navigation__link::after {
+    background: var(--green);
+  }
+  .navigation__social {
+    @apply flex items-center gap-x-6 ml-auto mr-[30px];
+  }
+  .navigation__social svg {
+    @apply w-6 h-6 opacity-60 transition-all duration-[0.4s] hover:opacity-100 hover:translate-y-[-5px] hover:cursor-pointer;
+  }
+  .dropdown {
+    @apply relative px-2.5 py-0;
+  }
+  .dropdown-menu {
+    @apply absolute hidden bg-[#011607] shadow-[0_2px_4px_rgba(0,0,0,0.1)] border border-[color:var(--green)] opacity-0 transition-opacity duration-[0.5s] z-[2] p-2.5 border-solid left-0 top-full;
+  }
+  .dropdown-menu a {
+    @apply block text-[rgba(255,255,255,0.7)] no-underline p-2.5 hover:bg-[color:var(--green)] hover:text-white;
+  }
+  .dropdown:hover .dropdown-menu {
+    @apply block opacity-100;
+  }
+  
+  /*
+ --------------------------------
+| É O IFRAME, NO CASO, O TRAILER ;)
+ ----------------------------------
+*/
+
+/* trailer FUNCIONAL */
+.video-container {
+  @apply float-right absolute w-6/12 max-w-[400px] right-[100px] top-[195px];
+}
+
+/* --------------------------------------------- */
+  /* APENAS UM COMENTÁRIO, PQ TAVA TESTANDO */
+  
+  /* FICOU BUGADO USANDO ESSE CÓDIGO*/
+  
+  /*.video-container {
+      margin-left: 730px;
+      margin-top: -410px;
+      width: 50%;
+      max-width: 560px; 
+      display:flex;
+      flex-direction: column;
+      align-items: flex-end;
+  } */
+  
+  /* FICOU BUGADO TAMBÉM
+  .video-container {
+      position: relative;
+      top: -450px;
+      left:63%;
+      transform:translateX(-50%);
+      width: 50%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 20px;
+  } */
+  
+/* --------------------------------------------- */
+
+/*
+ --------------------------------
+| LOGO DO STARPLUSSSS ;)
+ ----------------------------------
+*/
+  /* Starplusss */
+  .starplus-logo {
+    @apply w-[100px] h-auto z-[1];
+  
+    /* Ajuste o valor conforme necessário */
+  }
+  
