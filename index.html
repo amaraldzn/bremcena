@@ -8,14 +8,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Brasil em Cena</title>
-  <link rel="icon" type="image/x-icon" href="images/favicons/apple-touch-icon.png">
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="icon" type="image/x-icon" href="paginaprincipal/images/favicons/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
   <!-- Imports CSS -->
-  <link rel="stylesheet" href="assets/input.css">
-  <link href="assets/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="paginaprincipal/assets/input.css">
+  <link href="paginaprincipal/assets/output.css" rel="stylesheet">
   <!-- FIM Imports CSS -->
 
   <!-- Imports FONTS-->
@@ -30,12 +30,13 @@
 
   <!-- Imports TAILWIND-->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
   <!-- FIM Imports TAILWIND-->
 
   <!-- IMPORTS BOOTSTRAP ICONS-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
-
   <!-- FIM IMPORTS BOOTSTRAP ICONS-->
 
   <!--
@@ -75,7 +76,7 @@
     }
 
     .sidebar {
-      background-image: url('images/backgrounds/backgroundbremcenasidebar.png');
+      background-image: url('paginaprincipal/images/backgrounds/backgroundbremcenasidebar.png');
       background-size: cover;
       /* Ajusta a imagem para cobrir todo o fundo */
       background-position: center;
@@ -233,7 +234,7 @@
 
   <!-- CASO QUEIRA AJUSTAR A OPACIDADE DELE, ISAIAS OYU ANDREY, SÓ PEGAR A CLASSE E PROCURAR NO OUTPUT.CSS, E REGULAR. SE EU NÃO ME ENGANE, ESTÁ EM 0.9 A OPACITY-->
   <div id="background" class="relative">
-    <img src="images/backgrounds/brasilemcenacapa.png" class="papeldeparede">
+    <img src="paginaprincipal/images/backgrounds/brasilemcenacapa.png" class="papeldeparede">
     <div id="overlay"></div>
   </div>
 
@@ -251,7 +252,7 @@
       ------------------------------------------------
       -->
 
-      <img src="images/logos/Logo sem fundo.png" class="logobrasilemcena hidden md:block">
+      <img src="paginaprincipal/images/logos/Logo sem fundo.png" class="logobrasilemcena hidden md:block">
       <!-- AQUI É A LOGO QUE FICA NO CANTINHO (NO MENU DESKTOP, NO CASO)-->
 
       <!-- ----------------------------------------------------------- -->
@@ -308,7 +309,7 @@
           <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSConfig0)" />
         </svg>
         <!-- LOGIN -->
-        <a href="assets/login.html">
+        <a href="paginaprincipal/assets/login.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path fill="currentColor" fill-rule="evenodd"
               d="M8 7a4 4 0 1 1 8 0a4 4 0 0 1-8 0Zm0 6a5 5 0 0 0-5 5a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3a5 5 0 0 0-5-5H8Z"
@@ -333,7 +334,7 @@
         </svg>
       </div>
 
-      <!-- FIM ICONES DA NAVEGAÇÃO, ICONÉ DE CONFIGURAÇÕES, LOGIN, ETC -->
+      <!-- FIM ICONES DA NAVEGAÇÃO, ICONE DE CONFIGURAÇÕES, LOGIN, ETC -->
 
     </header> <!-- FIM DA HEADER-->
 
@@ -349,37 +350,137 @@
       -->
       <div class="main__info"> <!-- INÍCIO DA DIV CLASSE MAIN__INFO -->
 
+        <!-- 
+          CARROSSEL SLIDES
+        -->
 
-
-          <div class="app">
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+          <!-- Carrossel wrapper -->
+          <div class="relative h-56 sm:h-72 md:h-96 overflow-hidden rounded-lg">
+              <!-- Item 1 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="paginaprincipal/images/carrossel/carrossel1.png" class="absolute block w-full h-full object-cover" alt="Turmadamônicalicoes">
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="paginaprincipal/images/carrossel/carrossel1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Turmadamônicalicoes">
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="paginaprincipal/images/carrossel/carrossel1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Turmadamônicalicoes">
+            </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="paginaprincipal/images/carrossel/carrossel1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Turmadamônicalicoes">
+            </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="paginaprincipal/images/carrossel/carrossel1.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Turmadamônicalicoes">
+            </div>
           </div>
+          <!-- Slider indicators -->
+          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse mx-auto">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        </div>
+          <!-- Slider controls -->
+          <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                  </svg>
+                  <span class="sr-only">Previous</span>
+              </span>
+          </button>
+          <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden sm:visible" data-carousel-next>
 
+              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                  </svg>
+                  <span class="sr-only">Next</span>
+              </span>
+          </button>
+      </div>
 
-          <div class="flex flex-row items-center " style="height: 60vh; ">
-              
-              <div class="bg-no-repeat bg-cover m-1 pt-32 pb-32" style="background-image: url(https://br.web.img3.acsta.net/pictures/23/04/14/15/33/4605762.jpg);">
-                <div style="background-color: rgba(0, 0, 0, 0.6);">
-                  <h1>Dois Tempos</h1>
-                  <p class="sm:hidden lg:block">Paz é a maior influencer brasileira de 2022, mas seu mundo cai quando ela é cancelada na internet. Cecília é uma escritora lésbica de 1922 que se vê forçada a se casar com um homem. Sem perspectiva de escapar de seus destinos, as garotas expressam o mesmo desejo de ser livre. O universo então decide ajudá-las: misteriosamente elas viajam no tempo e acordam uma no corpo – e no século! – da outra.</p>
-                  <button type="button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded flex items-center	"><a href="indexnatan.html">Ver Mais</a></button>
-                </div>
+        <!--
+          CARDS
+        -->
+        <div class="min-h-screen sm:p-10 p-5 lg:px-10"> <!-- INÍCIO DOS CARDS-->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"> <!-- INÍCIO GRID CARDS -->
+            <!-- CARD 1-->
+            <div class="bg-black shadow-lg rounded-xl overflow-hidden max-w-xs sm:max-w-full sm:ml-0 sm:mr-auto">
+              <img src="paginaprincipal/images/cards/card1.png" alt="Card 1" class="w-full h-48 sm:h-32 object-cover">
+              <div class="p-4 sm:max-w-sm">
+                <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2">Dois tempos</h2>
+                <!--<div class="absolute top-[376px] left-[615px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Série</div> -->
+                <p class="text-gray-400 leading-relaxed">Dois Tempos une ainfluenciadora digital Paz, em 2022, e jovem escritora Cecília, em 1922, através de uma troca temporal. Juntas, enfrentam desafios e buscam liberdade.</p>
+                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
               </div>
-              <div class="bg-no-repeat bg-cover pt-32 pb-32" style="background-image: url(https://geekgamer-capas.nyc3.cdn.digitaloceanspaces.com/ill2lu9s.png);;">
-                <div style="background-color: rgba(0, 0, 0, 0.6);">
-                  <h1>Enigma do Medo</h1>
-                  <p>Se torne Mia, uma detetive paranormal buscando por seu pai que desapareceu. Investigue e desvende os mistérios do Enigma do Medo, derrotando monstros assustadores em seu caminho.</p>
-                  <button type="button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Ver Mais</button>
-                </div>
+            </div> <!-- FIM DO CARD 1 -->
+        
+            <!-- CARD 2 -->
+            <div class="bg-black shadow-lg rounded-xl overflow-hidden max-w-xs sm:max-w-full sm:ml-0 sm:mr-auto">
+              <img src="paginaprincipal/images/cards/card2.png" alt="Card 1" class="w-full h-48 sm:h-32 object-cover">
+              <div class="p-4 sm:max-w-sm">
+                <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2">Raimodula
+                </h2>
+                <!-- <div class="absolute top-[376px] left-[1065px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Jogo</div> -->
+                <p class="text-gray-400 leading-relaxed">Raimodula: plataforma dinâmica com personagens customizáveis, progressão aleatória, habilidades desbloqueáveis, inimigos modulares e cenários surreais em jogabilidade intensa e polida.</p>
+                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Jogar agora</a>
               </div>
-              <div class="bg-no-repeat bg-cover pt-44 pb-44 md:hidden lg:block" style="background-image: url(https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/08/01/618165391-cangaco-novo-amazon.jpg);">
-                <div style="background-color: rgba(0, 0, 0, 0.6);">
-                  <h1>Cangaço Novo</h1>
-                  <p>À deriva, descontente com a vida e precisando de dinheiro para cuidar de seu pai adotivo enfermo, Ubaldo, um bancário sem memória de sua infância, recebe uma herança que muda para sempre o rumo de sua história.</p>
-                  <button type="button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Ver Mais</button>
-                </div>
+            </div> <!-- FIM DO CARD 2-->
+
+            <!-- CARD 3 -->
+            <div class="bg-black shadow-lg rounded-xl overflow-hidden max-w-xs sm:max-w-full sm:ml-0 sm:mr-auto">
+              <img src="paginaprincipal/images/cards/card3.png" alt="Card 1" class="w-full h-48 sm:h-32 object-cover">
+              <div class="p-4 sm:max-w-sm">
+                <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2"> Invasão do P. do E.,</h2>
+                <!-- <div class="absolute top-[376px] left-[1517px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Livro</div> -->
+                <p class="text-gray-400 leading-relaxed">A Invasão do Povo do Espírito". Personagens como Gastón e Max conduzem uma trama intrigante, garantindo uma leitura única e envolvente, reminiscente de Machado de Assis.</p>
+                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Ler agora</a>
               </div>
-            
-          </div>
+            </div> <!-- FIM DO CARD 3-->
+
+            <!-- CARD 4 -->
+            <div class="bg-black shadow-lg rounded-xl overflow-hidden max-w-xs sm:max-w-full sm:ml-0 sm:mr-auto">
+              <img src="paginaprincipal/images/cards/card4.png" alt="Card 1" class="w-full h-48 sm:h-32 object-cover">
+              <div class="p-4 sm:max-w-sm">
+                <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2">Elis & Tom</h2>
+                <!-- <div class="absolute top-[781px] left-[613px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Filme</div> -->
+                <p class="text-gray-400 leading-relaxed">Documentário 'Elis & Tom' revela os bastidores da colaboração histórica entre Elis Regina e Tom Jobim em 1974, destacando desafios na produção do álbum.</p>
+                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
+              </div>
+            </div> <!-- FIM DO CARD 4 -->
+
+            <!-- CARD 5-->
+            <div class="bg-black shadow-lg rounded-xl overflow-hidden max-w-xs sm:max-w-full sm:ml-0 sm:mr-auto">
+              <img src="paginaprincipal/images/cards/card5.png" alt="Card 1" class="w-full h-48 sm:h-32 object-cover">
+              <div class="p-4 sm:max-w-sm">
+                <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2">Cabra M. P. Morrer.</h2>
+                <!-- <div class="absolute top-[781px] left-[1070px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Doc</div> -->
+                <p class="text-gray-400 leading-relaxed">Década de 60:João Pedro é assassinado. Filmagens interrompidas em 1964. Dezessete anos depois, diretor busca viúva e filhos, explorando as memórias da família camponesa durante o regime militar.</p>
+                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
+              </div>
+            </div> <!-- FIM DO CARD 5 -->
+
+            <!-- CARD 6 -->
+            <div class="bg-black shadow-lg rounded-xl overflow-hidden max-w-xs sm:max-w-full sm:ml-0 sm:mr-auto">
+              <img src="paginaprincipal/images/cards/card6.png" alt="Card 1" class="w-full h-48 sm:h-32 object-cover">
+              <div class="p-4 sm:max-w-sm">
+                <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2">Pantanal</h2>
+                <!-- <div class="absolute top-[781px] left-[1497px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Novela</div> -->
+                <p class="text-gray-400 leading-relaxed">Remake Pantanal: José Leôncio vai para o Pantanal, fica rico após morte do pai, esposa foge com filho. Filho volta, conflitos persistem. Apaixonado por Juma, moça selvagem, decide levá-la para o Rio.</p>
+                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
+              </div>
+            </div> <!-- FIM DO CARD 6 -->
+        
+          </div> <!-- FIM DO GRID CARDS -->
+        </div> <!-- FIM DA DIV DE CARDS -->
+
           
           <br><br>
           <div class="flex justify-evenly">
@@ -403,18 +504,40 @@
           <!-- CARROSSEL DE CARDS -->
 
           <!-- TEXTO-->
-          <h2>Em Alta | Passa pro lado para ver mais ➜</h2> <!-- FIM-->
+          <h2>Semelhantes | Passa pro lado para ver mais ➜</h2> <!-- FIM-->
 
           <!-- IMAGENS DO CARROSSEL DE CARDS-->
-          <div class="carrossel overflow-x-auto">
-            <img src="images/cards/bom dia veronica 2_0.jpg" alt="Bom dia Veronica">
-            <img src="https://us-a.tapas.io/sa/de/8b335a13-1cae-45a3-8fa3-921d1a8217ba_z.jpg" alt="Historias de Verão">
-            <img src="images/cards/temporada-de-verao-netflix-540x800.jpg" alt="Temporada de Verão">
-            <img src="images/cards/coisamaislinda.jpeg" alt="Coisa mais linda">
-            <img src="https://media.fstatic.com/KzPzQgzDkVSOQ5zMYZTtUHooUFA=/322x478/smart/filters:format(webp)/media/movies/covers/2023/02/MV5BYzRiNDdhNjAtNDcwZi00ZGRmLWE2NGQtZTI4YTUwZTk5YTA5XkEyXkFqcGdeQX_gcoTL2b.jpg" alt="Impuros">
-            <img src="images/cards/milanomultiverso.jpg" alt="Mila no Multiverso">
-            <img src="https://lojamonstra.com.br/loja/wp-content/uploads/2020/05/e3f93de1-60bd-4e88-bd0a-8e1661b3d5c8.jpg" alt="O rei da TV">
-          </div> <!-- FIM DAS IMAGENS DO CARROSSEL DE CARDS-->
+          <div class="carrossel-container overflow-x-auto">
+            <div class="carrossel flex">
+              <a href="assets/series/bomdiaveronica.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="paginaprincipal/images/cards/bomdiaveronica.jpg" alt="Bom dia Veronica" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/historiasdeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="paginaprincipal/images/cards/historiasdeverao.jpg" alt="Historias de Verão"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/temporadadeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="paginaprincipal/images/cards/temporadadeverao.jpg" alt="Temporada de Verão"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/coisamaislinda.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="paginaprincipal/images/cards/coisamaislinda.jpeg" alt="Coisa mais linda" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/impuros.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="paginaprincipal/images/cards/impuros.png" alt="Impuros" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/milanomultiversi.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="paginaprincipal/images/cards/milanomultiverso.jpg" alt="Mila no Multiverso" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/oreidatv.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="paginaprincipal/images/cards/oreidatv.jpg" alt="O rei da TV" class="max-w-full h-auto">
+              </a>
+            </div> <!-- FIM DA DIV CARROSSEL FLEX-->
+          </div> <!-- FIM IMAGENS DO CARROSSEL DE CARDS-->
+
+          <!-- FIM CARROSSEL DE CARDS -->
+          <div class="app">
+          </div>
 
           <!-- ----------------------------------------------------------- -->
           <!-- FOOTER (DEIXEI NO BODY PORQUE ACHEI QUE FICOU LEGAL, MAS QUALQUER COISA SÓ TIRAR)-->
@@ -458,7 +581,7 @@
   -->
 
 <div class="logo-brasil">
-  <img src="images/logos/Logo sem fundo.png" alt="">
+  <img src="paginaprincipal/images/logos/Logo sem fundo.png" alt="">
 </div>
 
 <div class="person-container">
