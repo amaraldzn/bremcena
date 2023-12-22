@@ -16,6 +16,11 @@
   <!-- Imports CSS -->
   <link rel="stylesheet" href="paginaprincipal/assets/input.css">
   <link href="paginaprincipal/assets/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="paginaprincipal/assets/index.css">
+
+  <!-- JS -->
+<!-- JIT SUPPORT, for using peer-* below -->
+<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
   <!-- FIM Imports CSS -->
 
   <!-- Imports FONTS-->
@@ -39,6 +44,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
   <!-- FIM IMPORTS BOOTSTRAP ICONS-->
 
+  
   <!--
     ------------------------------------------------
     | ESTILIZAÇÃO DO MENU MOBILE (HAMBURGUER)
@@ -46,6 +52,10 @@
   -->
   <!-- ESTILOS DE CONFIGURAÇÃO DO MENU SIDEBAR -->
   <style>
+
+    /* 
+    | SIDE BAR | ICON (CUSTOMIZAÇÃO)
+    */
     .sidebar.left-0 {
       left: initial;
       right: 5px;
@@ -65,6 +75,12 @@
       /* Ajuste o tamanho do ícone conforme necessário */
     }
 
+    /* FIM DE CUSTOMIZAÇÃO SIDE BAR | ICON */
+
+    /* 
+    | SIDE BAR MEDIA (CUSTOMIZAÇÃO)
+    */
+
     @media (min-width: 649px) {
       .sidebar {
         display: none;
@@ -82,6 +98,65 @@
       background-position: center;
       /* Centraliza a imagem */
     }
+
+
+    /* FIM DE CUSTOMIZAÇÃO SIDE BAR MEDIA*/
+
+    /* 
+    | BARRA LATERAL (CUSTOMIZAÇÃO)
+    */
+    .overflow-x-auto::-webkit-scrollbar {
+    height: 5px;
+    }
+
+  .overflow-x-auto::-webkit-scrollbar-track {
+    background: #a3a3a3; /* Cor de fundo da trilha */
+    border-radius: 10px;
+    }
+
+  .overflow-x-auto::-webkit-scrollbar-thumb {
+    background: #ffe600; /* Cor da alça (thumb) */
+    border-radius: 10px;
+    }
+
+    /* FIM DE CUSTOMIZAÇÃO BARRA*/
+
+    /* 
+    | CARROSSEL (CUSTOMIZAÇÃO)
+    */
+
+    .carousel-open:checked + .carousel-item {
+				position: static;
+				opacity: 100;
+			}
+			.carousel-item {
+				-webkit-transition: opacity 0.6s ease-out;
+				transition: opacity 0.6s ease-out;
+			}
+			#carousel-1:checked ~ .control-1,
+			#carousel-2:checked ~ .control-2,
+			#carousel-3:checked ~ .control-3 {
+				display: block;
+			}
+			.carousel-indicators {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				bottom: 2%;
+				left: 0;
+				right: 0;
+				text-align: center;
+				z-index: 10;
+			}
+			#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+			#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+			#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+				color: #2b6cb0;  /*Set to match the Tailwind colour you want the active one to be */
+			}
+
+      /* FIM DE CUSTOMIZAÇÃO DE CARROSSEL */
+
   </style> <!-- FIM DO STYLE (ESTILIZAÇÃO DO MENU MOBILE)-->
 
 </head> <!-- FIM DOS METADADOS/ESTILIZAÇÃO-->
@@ -350,7 +425,57 @@
       -->
       <div class="main__info"> <!-- INÍCIO DA DIV CLASSE MAIN__INFO -->
 
-        
+        <!-- TÍTULO-->
+        <div class="p-4 sm:max-w-sm mx-auto text-center">
+          <h2 class="text-4xl sm:text-4xl text-white font-luckies mb-2">Página Principal</h2>
+        </div> <!-- FIM DE TÍTULO -->
+
+          <!--
+            CARROUSEL
+          -->
+          
+          <div class="carousel relative shadow-2xl bg-white">
+            <div class="carousel-inner relative overflow-hidden w-full">
+                <!--Slide 1-->
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                    <img src="paginaprincipal/images/carrossel/carrossel1.png" alt="" class="h-full w-full object-cover">
+                </div>
+                <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-blue-600 hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-yellow-400 hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+                
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                  <img src="paginaprincipal/images/carrossel/carrossel2.png" alt="" class="h-full w-full object-cover">
+                </div>
+                <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+                
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="carousel-item absolute opacity-0" style="height:50vh;">
+                  <img src="paginaprincipal/images/carrossel/carrossel3.png" alt="" class="h-full w-full object-cover">
+                </div>
+                <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+
+                <!-- Add additional indicators for each slide-->
+                <ol class="carousel-indicators">
+                  <li class="inline-block mr-3">
+                    <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                  </li>
+                  <li class="inline-block mr-3">
+                    <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                  </li>
+                  <li class="inline-block mr-3">
+                    <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
+                  </li>
+                </ol>
+                
+              </div>
+        </div> <!-- FIM DO CARROSSEL-->
+
 
         <!--
           CARDS
@@ -428,29 +553,26 @@
         </div> <!-- FIM DA DIV DE CARDS -->
 
           
-          <br><br>
-          <div class="flex justify-evenly">
-            <div class="buttons flex">
-              <a class=" fa fa play">AÇÃO</a>
-            </div>
-            <div class="buttons flex">
-              <a class=" fa fa play">COMÉDIA</a>
-            </div>
-            <div class="buttons flex">
-              <a class=" fa fa play">ROMANCE</a>
-            </div>
-            <div class="buttons flex">
-              <a class=" fa fa play">FIÇÇÃO</a>
-            </div>
-            <div class="buttons flex">
-              <a class=" fa fa play">TERROR</a>
-            </div>
-          </div>
-          <br>
+        <div class="overflow-x-auto whitespace-nowrap p-4 rounded-lg">
+          <a href="/br/acao/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ação" onclick="genreClick('GPC', 'Gender path', 'CTA-Ação');">Ação</a>
+          <a href="/br/terror/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Terror" onclick="genreClick('GPC', 'Gender path', 'CTA-Terror');">Terror</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Ficção científica e fantasia</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Romance</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Comédia</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Aventura</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Suspense</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Educativo</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Mistério</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Documentário</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Drama</a>
+          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Faroeste</a>
+          <!-- Adicione mais botões conforme necessário -->
+        </div>
+
           <!-- CARROSSEL DE CARDS -->
 
           <!-- TEXTO-->
-          <h2>Semelhantes | Passa pro lado para ver mais ➜</h2> <!-- FIM-->
+          <h2 class="mt-10">Semelhantes | Passa pro lado para ver mais ➜</h2> <!-- FIM-->
 
           <!-- IMAGENS DO CARROSSEL DE CARDS-->
           <div class="carrossel-container overflow-x-auto">
@@ -531,7 +653,7 @@
 </div>
 
 <div class="person-container">
-  <a href="assets/login.html">
+  <a href="paginaprincipal/assets/login.html">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 45px; height: 50px; color: currentColor;">
       <path fill="currentColor"
         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4" />
