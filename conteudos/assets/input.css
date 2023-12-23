@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 
 /*
 --------------------------------------------
@@ -18,6 +19,13 @@
   consider using classes instead of the `@apply` directive
   @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
 */
+
+.font-chicle {
+  font-family: 'Chicle', cursive;
+}
+.font-luckies {
+  font-family: 'Luckiest Guy', cursive;
+}
 
 /*
  --------------------------------

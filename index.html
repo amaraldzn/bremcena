@@ -17,10 +17,10 @@
   <link rel="stylesheet" href="paginaprincipal/assets/input.css">
   <link href="paginaprincipal/assets/output.css" rel="stylesheet">
   <link rel="stylesheet" href="paginaprincipal/assets/index.css">
-
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <!-- JS -->
-<!-- JIT SUPPORT, for using peer-* below -->
-<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+  <!-- JIT SUPPORT, for using peer-* below -->
+  <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
   <!-- FIM Imports CSS -->
 
   <!-- Imports FONTS-->
@@ -31,6 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet"> 
   <!-- FIM Imports FONTS-->
 
   <!-- Imports TAILWIND-->
@@ -109,15 +110,18 @@
     height: 5px;
     }
 
-  .overflow-x-auto::-webkit-scrollbar-track {
-    background: #a3a3a3; /* Cor de fundo da trilha */
+    .overflow-x-auto::-webkit-scrollbar-track {
+    background: #114425; /* Cor de fundo da trilha */
     border-radius: 10px;
     }
 
-  .overflow-x-auto::-webkit-scrollbar-thumb {
+    .overflow-x-auto::-webkit-scrollbar-thumb {
     background: #ffe600; /* Cor da alça (thumb) */
     border-radius: 10px;
     }
+
+    /* SEGUNDA BARRA LATERAL (DO CARROSSEL COM CARDS*/
+    
 
     /* FIM DE CUSTOMIZAÇÃO BARRA*/
 
@@ -362,7 +366,7 @@
             <a href="">Terror</a>
             <a href="">Comédia</a>
             <a href="">Ação</a>
-            <a href="">Drama</a>
+            <a href="categorias.html">Drama</a>
           </div>
         </li> <!-- FIM DA LI DO DROPWDOWN (CONTÉUDO VISUAL SEM ESTILIZAÇÃO DO DROPDOWN)-->
         <!-- -------------------------------------------------------------------------------------------- -->
@@ -449,16 +453,16 @@
                 <div class="carousel-item absolute opacity-0" style="height:50vh;">
                   <img src="paginaprincipal/images/carrossel/carrossel2.png" alt="" class="h-full w-full object-cover">
                 </div>
-                <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
+                <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-blue-600 hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-yellow-400 hover:bg-blue-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
                 
                 <!--Slide 3-->
                 <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
                 <div class="carousel-item absolute opacity-0" style="height:50vh;">
                   <img src="paginaprincipal/images/carrossel/carrossel3.png" alt="" class="h-full w-full object-cover">
                 </div>
-                <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+                <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-blue-600 hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+                <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-yellow-400 hover:bg-blue-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
                 <!-- Add additional indicators for each slide-->
                 <ol class="carousel-indicators">
@@ -569,57 +573,251 @@
           <!-- Adicione mais botões conforme necessário -->
         </div>
 
-          <!-- CARROSSEL DE CARDS -->
+        <!-- CARROSSEL DE CARDS -->
 
           <!-- TEXTO-->
-          <h2 class="mt-10">Semelhantes | Passa pro lado para ver mais ➜</h2> <!-- FIM-->
+          <h2 class="mt-7 text-3xl sm:text-3xl text-white font-chicle mb-2">Filmes em alta ➜</h2> <!-- FIM-->
 
-          <!-- IMAGENS DO CARROSSEL DE CARDS-->
+          <!-- FILMES EM ALTA ( DO CARROSSEL DE CARDS )-->
           <div class="carrossel-container overflow-x-auto">
             <div class="carrossel flex">
               <a href="assets/series/bomdiaveronica.html" class="p-2 flex-shrink-0 mx-n1">
-                <img src="paginaprincipal/images/cards/bomdiaveronica.jpg" alt="Bom dia Veronica" class="max-w-full h-auto">
+                <img src="https://br.web.img3.acsta.net/pictures/23/07/27/15/46/2453404.jpg" alt="Nosso sonho" class="max-w-full h-auto">
               </a>
               <a href="assets/series/historiasdeverao.html" class="p-2 flex-shrink-0 mx-n1">
-                <img src="paginaprincipal/images/cards/historiasdeverao.jpg" alt="Historias de Verão"
+                <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2023/11/21/1148050406-poster-mamonas.jpg" alt="Mamonas Assassinas"
                   class="max-w-full h-auto">
               </a>
               <a href="assets/series/temporadadeverao.html" class="p-2 flex-shrink-0 mx-n1">
-                <img src="paginaprincipal/images/cards/temporadadeverao.jpg" alt="Temporada de Verão"
+                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/23/05/25/20/36/5989030.jpg" alt="Um ano inesquecível"
                   class="max-w-full h-auto">
               </a>
               <a href="assets/series/coisamaislinda.html" class="p-2 flex-shrink-0 mx-n1">
-                <img src="paginaprincipal/images/cards/coisamaislinda.jpeg" alt="Coisa mais linda" class="max-w-full h-auto">
+                <img src="https://fica.go.gov.br/wp-content/uploads/2023/06/mari1_23mar_web-Marilia-Senlle.jpg" alt="Árvore do sonho" class="max-w-full h-auto">
               </a>
               <a href="assets/series/impuros.html" class="p-2 flex-shrink-0 mx-n1">
-                <img src="paginaprincipal/images/cards/impuros.png" alt="Impuros" class="max-w-full h-auto">
+                <img src="https://www.shoppingcidadedasflores.com.br/wp-content/uploads/sites/244/2023/11/MUSSUM-CARTAZ.jpg" alt="Mussum" class="max-w-full h-auto">
               </a>
               <a href="assets/series/milanomultiversi.html" class="p-2 flex-shrink-0 mx-n1">
-                <img src="paginaprincipal/images/cards/milanomultiverso.jpg" alt="Mila no Multiverso" class="max-w-full h-auto">
+                <img src="https://br.web.img2.acsta.net/pictures/23/08/26/08/31/5731149.png" alt="Tia Virgínia" class="max-w-full h-auto">
               </a>
               <a href="assets/series/oreidatv.html" class="p-2 flex-shrink-0 mx-n1">
-                <img src="paginaprincipal/images/cards/oreidatv.jpg" alt="O rei da TV" class="max-w-full h-auto">
+                <img src="https://cinema10.com.br/upload/filmes/filmes_16897_perdida-filme-poster.jpg" alt="Perdida" class="max-w-full h-auto">
               </a>
             </div> <!-- FIM DA DIV CARROSSEL FLEX-->
-          </div> <!-- FIM IMAGENS DO CARROSSEL DE CARDS-->
+          </div> <!-- FIM FILMES EM ALTA IMAGENS DO CARROSSEL DE CARDS-->
 
-          <!-- FIM CARROSSEL DE CARDS -->
+          <!-- TEXTO-->
+          <h2 class="mt-10 text-3xl sm:text-3xl text-white font-chicle mb-2">Séries em alta ➜</h2> <!-- FIM-->
+
+          <!-- SÉRIES EM ALTA ( DO CARROSSEL DE CARDS )-->
+          <div class="carrossel-container overflow-x-auto">
+            <div class="carrossel flex">
+              <a href="assets/series/bomdiaveronica.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img2.acsta.net/c_310_420/pictures/23/07/05/17/24/2819621.jpg" alt="Cangaço Novo" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/historiasdeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="paginaprincipal/images/cards/impuros.png" alt="Impuros"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/temporadadeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://cdn.ome.lt/4-SoyoMtJIesCDDz0PtcjJyInjU=/fit-in/837x500/smart/uploads/conteudo/fotos/poster_novela_prime_video.jpg" alt="Novela"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/coisamaislinda.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img2.acsta.net/pictures/23/06/26/17/01/0102810.jpg" alt="Negociador" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/impuros.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://portalpopline.com.br/wp-content/uploads/2023/05/os-outros-globoplay.jpg" alt="Os outros" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/milanomultiversi.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/23/08/01/19/04/4948136.jpg" alt="As Aventuras de José & Durval" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/oreidatv.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/7/7a/Cidade_Invis%C3%ADvel%2C_cartaz.png" alt="Cidade Invispivel" class="max-w-full h-auto">
+              </a>
+            </div> <!-- FIM DA DIV CARROSSEL FLEX-->
+          </div> <!-- FIM FILMES EM ALTA IMAGENS DO CARROSSEL DE CARDS-->
+
+          <!-- TEXTO-->
+          <h2 class="mt-10 text-3xl sm:text-3xl text-white font-chicle mb-2">Novelas em alta ➜</h2> <!-- FIM-->
+
+          <!-- SÉRIES EM ALTA ( DO CARROSSEL DE CARDS )-->
+          <div class="carrossel-container overflow-x-auto">
+            <div class="carrossel flex">
+              <a href="assets/series/bomdiaveronica.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/21/10/11/22/11/2724309.jpg" alt="Verdades Secretas" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/historiasdeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/22/08/10/00/20/5744663.jpg" alt="Pantanal"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/temporadadeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/22/02/08/20/48/4343348.jpg" alt="Além da ilusão"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/coisamaislinda.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img2.acsta.net/c_310_420/pictures/21/10/07/21/41/1458098.jpg" alt="O Clone" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/impuros.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/22/08/10/18/28/2791731.jpg" alt="Cara e Coragem" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/milanomultiversi.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/618qmc9Oj1L._AC_UF894,1000_QL80_.jpg" alt="Poliana Moça" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/oreidatv.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/22/08/10/19/35/2103452.jpg" alt="Reis" class="max-w-full h-auto">
+              </a>
+            </div> <!-- FIM DA DIV CARROSSEL FLEX-->
+          </div> <!-- FIM FILMES EM ALTA IMAGENS DO CARROSSEL DE CARDS-->
+
+          <!-- TEXTO-->
+          <h2 class="mt-10 text-3xl sm:text-3xl text-white font-chicle mb-2">Jogos em alta ➜</h2> <!-- FIM-->
+          
+          <!-- SÉRIES EM ALTA ( DO CARROSSEL DE CARDS )-->
+          <div class="carrossel-container overflow-x-auto">
+            <div class="carrossel flex">
+              <a href="assets/series/bomdiaveronica.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://assetsio.reedpopcdn.com/co5uti.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" alt="Vengeful Guardian: Moonrider" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/historiasdeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://bdjogos.com.br/capas/13912-asleep-pc-capa-1.jpg" alt="Asleep"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/temporadadeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5bqz.jpg" alt="Bloodless"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/coisamaislinda.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://p2.trrsf.com.br/image/fget/cf/540/960/smart/images.terra.com/2023/01/05/wind-runners-1k22trlqfz6t3.png" alt="Wind Runners" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/impuros.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://cdn1.epicgames.com/spt-assets/4515173972ae4444a2582bc690c150bd/download-astrea-six-sided-oracles-offer-av5rc.png" alt="Astrea: Six-Sided Oracles" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/milanomultiversi.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://img.itch.zone/aW1nLzExNDYwNDg4LnBuZw==/original/YIu81B.png" alt="Ghetto Zombies" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/oreidatv.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://howlongtobeat.com/games/131604_RoadOut.jpg" alt="RoadOut" class="max-w-full h-auto">
+              </a>
+            </div> <!-- FIM DA DIV CARROSSEL FLEX-->
+          </div> <!-- FIM FILMES EM ALTA IMAGENS DO CARROSSEL DE CARDS-->
+
+          <!-- TEXTO-->
+          <h2 class="mt-10 text-3xl sm:text-3xl text-white font-chicle mb-2">Documentários em alta ➜</h2> <!-- FIM-->
+
+          <!-- SÉRIES EM ALTA ( DO CARROSSEL DE CARDS )-->
+          <div class="carrossel-container overflow-x-auto">
+            <div class="carrossel flex">
+              <a href="assets/series/bomdiaveronica.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/23/01/09/17/04/0128717.png" alt="Todo dia a mesma noite" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/historiasdeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img2.acsta.net/pictures/20/09/18/21/55/0969832.jpg" alt="Me chama que eu vou"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/temporadadeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/23/05/19/17/52/3826134.jpg" alt="Olha o que ele fez"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/coisamaislinda.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/23/06/20/16/23/0583159.jpg" alt="Viajando com os Gil" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/impuros.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://media.fstatic.com/JhiPNpNKSEH5d0pwrsIHcTJR2Mg=/322x478/smart/filters:format(webp)/media/movies/covers/2023/07/mlv4E2MTEfoqJ3Ry076YnVVlVdA.jpg" alt="Xuxa, o documentário" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/milanomultiversi.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://br.web.img3.acsta.net/pictures/23/06/26/22/19/0342435.jpg" alt="A Superfantástica História do Balão" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/oreidatv.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://feira.tangerina.news/wp-content/uploads/2023/02/sem-filtro-cartaz-jpg.jpg" alt="Sem filtro" class="max-w-full h-auto">
+              </a>
+            </div> <!-- FIM DA DIV CARROSSEL FLEX-->
+          </div> <!-- FIM FILMES EM ALTA IMAGENS DO CARROSSEL DE CARDS-->
+
+          <!-- TEXTO-->
+          <h2 class="mt-10 text-3xl sm:text-3xl text-white font-chicle mb-2">Livros em alta ➜</h2> <!-- FIM-->
+
+          <!-- SÉRIES EM ALTA ( DO CARROSSEL DE CARDS )-->
+          <div class="carrossel-container overflow-x-auto">
+            <div class="carrossel flex">
+              <a href="assets/series/bomdiaveronica.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/51vfZs5VxYL._SY445_SX342_.jpg" alt="A invasão do povo do espírito" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/historiasdeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/71JDsZT6cLL._SL1500_.jpg" alt="Morte em suas mãos"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/temporadadeverao.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/51MD8axoPEL._SY445_SX342_.jpg" alt="Escrever é muito perigoso: Ensaios e conferências"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/coisamaislinda.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/51GIxpmp9YL._SY445_SX342_.jpg" alt="Uma chance de continuarmos assim" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/impuros.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/414rblT7VTL._SY445_SX342_.jpg" alt="Leopold" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/milanomultiversi.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/41eZ0jK3DQL._SY445_SX342_.jpg" alt="Essencial Roberto Schwarz" class="max-w-full h-auto">
+              </a>
+              <a href="assets/series/oreidatv.html" class="p-2 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/51ysFv3P3uL._SY445_SX342_.jpg" alt="O ninho" class="max-w-full h-auto">
+              </a>
+            </div> <!-- FIM DA DIV CARROSSEL FLEX-->
+          </div> <!-- FIM FILMES EM ALTA IMAGENS DO CARROSSEL DE CARDS-->
+
+        <!-- FIM CARROSSEL DE CARDS -->
           <div class="app">
           </div>
 
           <!-- ----------------------------------------------------------- -->
           <!-- FOOTER (DEIXEI NO BODY PORQUE ACHEI QUE FICOU LEGAL, MAS QUALQUER COISA SÓ TIRAR)-->
 
-          <footer class="text-white py-4">
-            <div class="container mx-auto flex items-center justify-center mt-auto">
-              <p class="text-center outline-none">
-                Brasil em Cena, 2023 © Todos os direitos autorais do Brasil em Cena são reservados. A reprodução,
-                distribuição ou uso não autorizado do conteúdo é estritamente proibido. O material é protegido por leis
-                de direitos autorais. Qualquer uso comercial requer permissão. Respeitamos e aplicamos as leis de
-                propriedade intelectual. Entre em contato para solicitações específicas.
-              </p>
-            </div>
-          </footer> <!-- FIM DO FOOTER-->
+          
+                <footer class="footer">
+                  <div class="container">
+                    <div class="row">
+                      <div class="footer-col">
+                        <h4>Equipe</h4>
+                        <ul>
+                          <li><a href="https://www.linkedin.com/in/natanael-amaral-a8661b264/">Natanael A.</a></li>
+                          <li><a href="">Andrey V.</a></li>
+                          <li><a href="https://www.linkedin.com/in/isaias-silva-viana-b80ba329a/">Isaias V.</a></li>
+                        </ul>
+                      </div>
+                      <div class="footer-col">
+                        <h4>Utilitários</h4>
+                        <ul>
+                          <li><a href="https://github.com/amaraldzn/bremcena">Código fonte</a></li>
+                          <li><a href="#">API</a></li>
+                          <li><a href="#">Quem somos</a></li>
+                          <li><a href="#">Política de privacidade</a></li>
+                          <li><a href="#">Termos de Uso</a></li>
+                        </ul>
+                      </div>
+                      <div class="footer-col">
+                        <h4>Atalhos</h4>
+                        <ul>
+                          <li><a href="#">Página principal</a></li>
+                          <li><a href="#">Categorias</a></li>
+                          <li><a href="#">Lançamentos</a></li>
+                          <li><a href="#">Melhores</a></li>
+                        </ul>
+                      </div>
+                      <div class="footer-col">
+                        <h4>Siga-nos</h4>
+                        <div class="social-links">
+                          <a href="https://www.facebook.com/profile.php?id=100094559876343"><i class="fab fa-facebook-f"></i></a>
+                          <a href="https://twitter.com/AmaralDzn"><i class="fab fa-twitter"></i></a>
+                          <a href="https://www.instagram.com/amaraldsn/"><i class="fab fa-instagram"></i></a>
+                          <a href="https://www.linkedin.com/in/natanael-amaral-a8661b264/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </footer>
+
           <!-- ----------------------------------------------------------- -->
 
 
@@ -629,7 +827,7 @@
 
     </main>
 
-
+    
 
 </body> <!-- ACABOU O BODY, FML-->
 
@@ -661,6 +859,9 @@
   </a>
 
 </div>
+
+
+
 
 <!--
   ------------------------------------------------

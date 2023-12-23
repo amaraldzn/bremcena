@@ -1,7 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 /*
 --------------------------------------------
 | EU NEM SEI O QUE FIZ AQUI, PQ USEI O CSS TO TAILWIND, MAS
@@ -18,6 +17,20 @@
   consider using classes instead of the `@apply` directive
   @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
 */
+
+
+/*---------------------------------------------*/
+
+/* FONT PARA O CARROSSEL DE CARDS */
+
+/*--------------------------------------------- */
+
+.font-chicle {
+  font-family: 'Chicle', cursive;
+}
+.font-luckies {
+  font-family: 'Luckiest Guy', cursive;
+}
 
 /*
  --------------------------------
