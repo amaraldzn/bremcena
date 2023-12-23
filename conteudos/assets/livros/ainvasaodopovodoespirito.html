@@ -7,15 +7,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Dois Tempos</title>
-  <link rel="icon" type="image/x-icon" href="conteudos/images/favicons/apple-touch-icon.png">
+  <title>A Invasão do Povo de Espírito</title>
+  <link rel="icon" type="image/x-icon" href="../../images/favicons/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
   <!-- Imports CSS -->
-  <link rel="stylesheet" href="conteudos/assets/input.css">
-  <link href="conteudos/assets/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="../input.css">
+  <link href="../output.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <!-- JS -->
   <!-- JIT SUPPORT, for using peer-* below -->
@@ -95,7 +95,7 @@
     }
 
     .sidebar {
-      background-image: url('conteudos/images/backgrounds/backgroundbremcenasidebar.png');
+      background-image: url('../../images/backgrounds/backgroundbremcenasidebar.png');
       background-size: cover;
       /* Ajusta a imagem para cobrir todo o fundo */
       background-position: center;
@@ -150,7 +150,7 @@
         
         <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600 no-underline">
           <i class="bi bi-house-door-fill"></i>
-          <a href="index.html">
+          <a href="../../../index.html">
             <span class="text-[17px] ml-4 text-gray-200">Página principal</span>
           </a>         
         </div>
@@ -261,9 +261,22 @@
 
   <!-- CASO QUEIRA AJUSTAR A OPACIDADE DELE, ISAIAS OYU ANDREY, SÓ PEGAR A CLASSE E PROCURAR NO OUTPUT.CSS, E REGULAR. SE EU NÃO ME ENGANE, ESTÁ EM 0.9 A OPACITY-->
   <div id="background" class="relative">
-    <img src="conteudos/images/backgrounds/brasilemcenacapa.png" class="papeldeparede">
-    <div id="overlay"></div>
+    <!-- Imagem de fundo com opacidade máxima -->
+    <img src="https://cdn.pixabay.com/photo/2023/08/16/19/31/galaxy-8194933_1280.jpg" class="papeldeparede">
+    <!-- Fundo preto com opacidade -->
+    <div class="black-overlay absolute inset-0 bg-black opacity-75"></div>
   </div>
+  
+  <div id="background2" class="relative">
+    <!-- Bandeira do Brasil com opacidade reduzida -->
+    <img src="../../images/backgrounds/bandeiradobrasilmesclagem.png" class="papeldeparede2">
+  </div>
+
+  <div id="background3" class="relative">
+    <!-- Bandeira do Brasil com opacidade reduzida -->
+    <img src="../../images/backgrounds/black-color-solid-background-1920x1080.png" class="papeldeparede3">
+  </div>
+
 
   <div id="app">
 
@@ -278,8 +291,8 @@
       | NAVIGATION
       ------------------------------------------------
       -->
-      <a href="index.html">
-        <img src="conteudos/images/logos/Logo sem fundo.png" class="logobrasilemcena hidden md:block">
+      <a href="../../../index.html">
+        <img src="../../images/logos/Logo sem fundo.png" class="logobrasilemcena hidden md:block">
       </a>
       
       <!-- AQUI É A LOGO QUE FICA NO CANTINHO (NO MENU DESKTOP, NO CASO)-->
@@ -288,7 +301,7 @@
       <!-- INÍCIO DA UL (NO CASO, TODA O TEXTO DA NAVEGAÇÃO SUPERIOR)-->
       <ul class="navigation hidden md:flex">
         <li>
-          <a href="index.html" class="navigation__link">Página Principal</a>
+          <a href="../../../index.html" class="navigation__link">Página Principal</a>
         </li>
         <li>
           <a href="#" class="navigation__link">Documentários</a>
@@ -316,7 +329,7 @@
             <a href="">Terror</a>
             <a href="">Comédia</a>
             <a href="">Ação</a>
-            <a href="categorias.html">Drama</a>
+            <a href="../../../categorias.html">Drama</a>
           </div>
         </li> <!-- FIM DA LI DO DROPWDOWN (CONTÉUDO VISUAL SEM ESTILIZAÇÃO DO DROPDOWN)-->
         <!-- -------------------------------------------------------------------------------------------- -->
@@ -338,7 +351,7 @@
           <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSConfig0)" />
         </svg>
         <!-- LOGIN -->
-        <a href="conteudos/assets/login.html">
+        <a href="../login.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path fill="currentColor" fill-rule="evenodd"
               d="M8 7a4 4 0 1 1 8 0a4 4 0 0 1-8 0Zm0 6a5 5 0 0 0-5 5a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3a5 5 0 0 0-5-5H8Z"
@@ -380,22 +393,20 @@
       <div class="main__info"> <!-- INÍCIO DA DIV CLASSE MAIN__INFO -->
 
         <!-- TEXTOS DA SINOPSE E TÍTULO-->
-        <h1 style="margin-bottom: -2rem;" class="font-extrabold text-[400%] font-luckiest">Dois</h1>
-        <h1 style="margin-bottom: 0.500rem;" class="font-extrabold text-[400%] font-luckiest">Tempos</h1>
+        <h1 style="margin-bottom: -2rem;" class="font-extrabold text-[400%] font-luckiest">A Invasão</h1>
+        <h1 style="margin-bottom: -2rem;" class="font-extrabold text-[400%] font-luckiest">do Povo</h1>
+        <h1 style="margin-bottom: 0.1rem;" class="font-extrabold text-[400%] font-luckiest">de Espírito</h1>
         <h4>
           <span>2023</span>
-          <span><i>+16</i></span>
-          <span>Série</span>
-          <span>Drama</span>
+          <span><i>+10</i></span>
+          <span>Livro</span>
+          <span>Ficção literária</span>
         </h4>
-        <p>Paz é a maior influencer brasileira de 2022, mas seu mundo cai quando ela é cancelada na internet. Cecília é
-          uma escritora lésbica de 1922 que se vê forçada a se casar com um homem. Sem perspectiva de escapar de seus
-          destinos, as garotas expressam o mesmo desejo de ser livre. O universo então decide ajudá-las: misteriosamente
-          elas viajam no tempo e acordam uma no corpo – e no século! – da outra.</p>
+        <p>No novo romance de Juan Pablo Villalobos, dois imigrantes enfrentam uma crise existencial diante de burocracias, teorias da conspiração e uma doença terminal. O livro é elogiado pela habilidade do autor em detalhes, imagens e acrobacias verbais. Protagonizado por Gastón, Gato (um cachorro), Max e Pol, "A Invasão do Povo do Espírito" é uma narrativa hilariante e atual que explora laços afetivos em meio a xenofobia, corrupção e gentrificação. O narrador destaca a necessidade de superar ressentimentos, oferecendo uma perspectiva única sobre a força dos relacionamentos.</p>
         <!-- BOTÕES DE PLAY E FAVORITOS-->
         <div class="buttons">
-          <a href="https://www.starplus.com/pt-br/series/dois-tempos/FNIiW5nw9FXW"><i class="fa fa play" aria-hidden="true"></i> ▶
-            Assistir</a>
+          <a href="https://amzn.to/3TySgaz"><i class="fa fa play" aria-hidden="true"></i> ▶
+            Ler</a>
           <a href="#"><i class="fa fa plus" aria-hidden="true"></i>+
             Favoritos</a>
         </div>
@@ -405,10 +416,7 @@
 
         <div class="lg:hidden mx-4 my-1 ml-0">
           <!-- Este bloco será exibido apenas em telas menores ou iguais a 648 pixels -->
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/Iq7cGJsGDs4?si=V2IPTRCEn9YS6Lf4"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/HSUXCh786P4?si=d0Rbcq9ln-V_MkDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <!-- FIM PARA TELAS MENORES OU IGUAIS A 648PX (ESSA CONFIG GARANTE QUE NESSAS DIMENSÕES AQUELA INCORPORAÇÃO QUE O PROFESSOR TINHA PEDIDO QUEBRE E JOGUE O TRAILER PRA BAIXO DOS BOTÕES DE PLAY E FAVORITOS)-->
         <!-- ----------------------------------------------------------- -->
@@ -418,35 +426,16 @@
         <div class="streaming"> <!-- INÍCIO DA DIV STREAMING -->
 
           <!-- TEXTO-->
-          <h2 class="mt-7 text-2xl sm:text-2xl text-white font-chicle mb-2">Transmissões</h2> <!-- FIM-->
+          <h2 class="mt-7 text-2xl sm:text-2xl text-white font-chicle mb-2">Autor</h2> <!-- FIM-->
 
           <!-- A PRÓPRIA LOGO-->
-          <a href="https://www.starplus.com/pt-br" alt="Link Starplus"><svg version="1.1" id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 2500 713.7"
-              style="enable-background:new 0 0 2500 713.7" xml:space="preserve" width="150" height="'100">
-              <style>
-                .st0 {
-                  fill: #241c32
-                }
-              </style>
-              <g id="g101">
-                <path id="path935" class="st0"
-                  d="M2196.9 327.6V153.1h121.4v174.4H2500v116.3h-181.7v174h-121.4v-174h-182.2V327.6h182.2z" />
-                <path id="path11" class="st0"
-                  d="M1654.8 200.7h76.4c46 0 75.4 23.8 75.4 65.3 0 45.2-29.4 74.6-75.4 74.6h-76.4V200.7zm131.5 230.9c79.1-10.1 144.4-78.1 144.4-164.6 0-112.2-76.4-173.8-199.5-173.8h-198.7V658h122.4V431.6l151.8 226.2h141.6l-162-226.2z" />
-                <path id="polygon13" class="st0" d="M797.5 204.4V93.1H424.9v111.3h124.2v453.4h124.3V204.4z" />
-                <path id="path15" class="st0"
-                  d="M195 301c-36.8-16.6-50.7-34.9-50.7-58.8 0-27.7 23-50.7 59.8-49.7 32.1.8 57.1 18.3 74.6 59.8l105.8-47C355.2 130 295.4 85.9 198.9 85.9c-102.1 0-177.5 67.2-177.5 157.2 0 61.6 30.4 110.3 102.1 146.3l79.1 39.6c44 22.2 65.3 38.6 65.3 70.7 0 34.9-28.4 59.8-65.3 59.8-39.6 0-75.4-22.2-92-71.7L0 520c25.7 93 102.1 147.3 201.5 147.3 107.6 0 190.4-69 190.4-168.3 0-76.4-41.3-127-120.6-162.7L195 301z" />
-                <linearGradient id="path3144-6_1_" gradientUnits="userSpaceOnUse" x1="943.107" y1="1052.768"
-                  x2="1476.486" y2="519.879" gradientTransform="translate(-67.73 -354.317) scale(.9857)">
-                  <stop offset=".28" style="stop-color:#fa1660" />
-                  <stop offset=".78" style="stop-color:#ff7d17" />
-                </linearGradient>
-                <path id="path3144-6"
-                  d="M1499.3 272.4h-286.6L1124 0l-88.7 272.4H748.8l229.9 168.7s112.4-74 248.6-101.9c-200.9 148.3-310 295.4-310 295.4l-25.1 79.1L1124 545.4l231.9 168.3-88.5-272.6 231.9-168.7z"
-                  style="fill:url(#path3144-6_1_)" />
-              </g>
-            </svg></a> <!-- FIM DA LOGO DO SERVIÇO DE STREAMING-->
+          <a href="https://pt.wikipedia.org/wiki/Juan_Pablo_Villalobos" alt="Link Starplus">
+            <svg width="90" height="90" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+              <circle cx="12" cy="9" r="3"  stroke="#fff" stroke-width="1.5"/>
+              <path d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7" stroke="#16a34a" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a> <!-- FIM DA LOGO DO SERVIÇO DE STREAMING-->
 
           <div class="app">
           </div>
@@ -458,10 +447,7 @@
 
           <div class="hidden lg:block float-right absolute w-6/12 max-w-[400px] right-[400px] top-[260px]">
             <!-- Este bloco será exibido apenas em telas maiores que 648 pixels -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Iq7cGJsGDs4?si=V2IPTRCEn9YS6Lf4"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <iframe width="516" height="315" src="https://www.youtube.com/embed/HSUXCh786P4?si=d0Rbcq9ln-V_MkDr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
 
           <!-- FIM | JÁ ESSE IFRAME É O PADRÃO DE DESKTOP, ELE APARECE DO LADO DA SINOPSE, DIFERENTE DO OUTRO QUE, EM TELAS MENORES, ELE JOGA PŔA BAIXO -->
@@ -477,33 +463,37 @@
           <!-- IMAGENS DO CARROSSEL DE CARDS-->
           <div class="overflow-x-auto whitespace-nowrap p-4 rounded-lg mb-0 m-0">
             <div class="carrossel flex" style="margin-top: -20px;">
-              <a href="assets/series/bomdiaveronica.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/23/07/18/23/50/5022166.jpg" alt="Além do Guarda-Roupa" class="max-w-full h-auto">
+              <a href="https://amzn.to/41C4Bg7" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://static.wixstatic.com/media/0a154a_1008f0f8c8c14b529c989ddcbbc55953~mv2.jpg/v1/fill/w_480,h_724,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0a154a_1008f0f8c8c14b529c989ddcbbc55953~mv2.jpg" alt="O caçador cibernético da rua 13" class="max-w-full h-auto">
               </a>
-              <a href="assets/series/historiasdeverao.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/14/04/28/17/35/010007.jpg" alt="Hoje é dia de Maria"
+              <a href="https://amzn.to/3NEaow8" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/71fOKK9R1EL._SL1341_.jpg" alt="As águas-vivas não sabem de si"
                   class="max-w-full h-auto">
               </a>
-              <a href="assets/series/temporadadeverao.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/14/04/08/15/51/357975.jpg" alt="Meu Pedacinho de Chão"
+              <a href="https://amzn.to/48u2e1j" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/71WZYX6geCL._SL1500_.jpg" alt="A lição de anatomia do temível Dr. Louison"
                   class="max-w-full h-auto">
               </a>
-              <a href="assets/series/coisamaislinda.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/20/09/29/21/10/3757947.jpg" alt="Desalma" class="max-w-full h-auto">
+              <a href="https://amzn.to/3Ryzcql" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/81fMJbk0j9L._SL1500_.jpg" alt="O Esplendor" class="max-w-full h-auto">
               </a>
-              <a href="assets/series/impuros.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/21/01/20/17/31/5372090.jpg" alt="Cidade Invisível" class="max-w-full h-auto">
+              <a href="https://www.amazon.com.br/Uma-mulher-escuro-Raphael-Montes-ebook/dp/B07QN8JZM5?&linkCode=sl1&tag=natanaelamara-20&linkId=ccf59e62cfaad510d27189b48387da69&language=pt_BR&ref_=as_li_ss_tl" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/91biwYR90GS._SL1500_.jpg" alt="Uma mulher no escuro" class="max-w-full h-auto">
               </a>
-              <a href="assets/series/milanomultiversi.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="conteudos/images/cards/milanomultiverso.jpg" alt="Mila no Multiverso" class="max-w-full h-auto">
+              <a href="https://amzn.to/3RU3rJD" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/71eWaK88H6L._SL1500_.jpg" alt="Serpentário" class="max-w-full h-auto">
               </a>
-              <a href="assets/series/oreidatv.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="conteudos/images/cards/oreidatv.jpg" alt="O rei da TV" class="max-w-full h-auto">
+              <a href="https://amzn.to/47dB79M" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/71ByE0D3CYL._SL1229_.jpg" alt="Doramar ou a odisseia: Histórias" class="max-w-full h-auto">
               </a>
             </div> <!-- FIM DA DIV CARROSSEL FLEX-->
           </div> <!-- FIM IMAGENS DO CARROSSEL DE CARDS-->
 
           <!-- FIM CARROSSEL DE CARDS -->
+
+          <!--
+            FOOTER
+          -->
 
           <!-- ----------------------------------------------------------- -->
           <!-- FOOTER (DEIXEI NO BODY PORQUE ACHEI QUE FICOU LEGAL, MAS QUALQUER COISA SÓ TIRAR)-->
@@ -532,7 +522,7 @@
                 <div class="footer-col">
                   <h4>Atalhos</h4>
                   <ul>
-                    <li><a href="index.html">Página principal</a></li>
+                    <li><a href="../../../index.html">Página principal</a></li>
                     <li><a href="#">Categorias</a></li>
                     <li><a href="#">Lançamentos</a></li>
                     <li><a href="#">Melhores</a></li>
@@ -579,14 +569,14 @@
   -->
 
 <div class="logo-brasil">
-  <a href="index.html">
-    <img src="conteudos/images/logos/Logo sem fundo.png" alt="">
+  <a href="../../../index.html">
+    <img src="../../images/logos/Logo sem fundo.png" alt="">
   </a>
   
 </div>
 
 <div class="person-container">
-  <a href="conteudos/assets/login.html">
+  <a href="../login.html">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 45px; height: 50px; color: currentColor;">
       <path fill="currentColor"
         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4" />

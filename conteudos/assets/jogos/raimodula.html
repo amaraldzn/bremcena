@@ -7,15 +7,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Dois Tempos</title>
-  <link rel="icon" type="image/x-icon" href="conteudos/images/favicons/apple-touch-icon.png">
+  <title>Raimodula</title>
+  <link rel="icon" type="image/x-icon" href="../../images/favicons/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 
   <!-- Imports CSS -->
-  <link rel="stylesheet" href="conteudos/assets/input.css">
-  <link href="conteudos/assets/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="../input.css">
+  <link href="../output.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <!-- JS -->
   <!-- JIT SUPPORT, for using peer-* below -->
@@ -95,7 +95,7 @@
     }
 
     .sidebar {
-      background-image: url('conteudos/images/backgrounds/backgroundbremcenasidebar.png');
+      background-image: url('../../images/backgrounds/backgroundbremcenasidebar.png');
       background-size: cover;
       /* Ajusta a imagem para cobrir todo o fundo */
       background-position: center;
@@ -150,7 +150,7 @@
         
         <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600 no-underline">
           <i class="bi bi-house-door-fill"></i>
-          <a href="index.html">
+          <a href="../../../index.html">
             <span class="text-[17px] ml-4 text-gray-200">Página principal</span>
           </a>         
         </div>
@@ -261,9 +261,22 @@
 
   <!-- CASO QUEIRA AJUSTAR A OPACIDADE DELE, ISAIAS OYU ANDREY, SÓ PEGAR A CLASSE E PROCURAR NO OUTPUT.CSS, E REGULAR. SE EU NÃO ME ENGANE, ESTÁ EM 0.9 A OPACITY-->
   <div id="background" class="relative">
-    <img src="conteudos/images/backgrounds/brasilemcenacapa.png" class="papeldeparede">
-    <div id="overlay"></div>
+    <!-- Imagem de fundo com opacidade máxima -->
+    <img src="https://images.gog-statics.com/2a59dfe1274bd96bcc8e47a3c3912273c33120424bd950f012c18df47f20aca1.jpg" class="papeldeparede">
+    <!-- Fundo preto com opacidade -->
+    <div class="black-overlay absolute inset-0 bg-black opacity-75"></div>
   </div>
+  
+  <div id="background2" class="relative">
+    <!-- Bandeira do Brasil com opacidade reduzida -->
+    <img src="../../images/backgrounds/bandeiradobrasilmesclagem.png" class="papeldeparede2">
+  </div>
+
+  <div id="background3" class="relative">
+    <!-- Bandeira do Brasil com opacidade reduzida -->
+    <img src="../../images/backgrounds/black-color-solid-background-1920x1080.png" class="papeldeparede3">
+  </div>
+
 
   <div id="app">
 
@@ -278,8 +291,8 @@
       | NAVIGATION
       ------------------------------------------------
       -->
-      <a href="index.html">
-        <img src="conteudos/images/logos/Logo sem fundo.png" class="logobrasilemcena hidden md:block">
+      <a href="../../../index.html">
+        <img src="../../images/logos/Logo sem fundo.png" class="logobrasilemcena hidden md:block">
       </a>
       
       <!-- AQUI É A LOGO QUE FICA NO CANTINHO (NO MENU DESKTOP, NO CASO)-->
@@ -288,7 +301,7 @@
       <!-- INÍCIO DA UL (NO CASO, TODA O TEXTO DA NAVEGAÇÃO SUPERIOR)-->
       <ul class="navigation hidden md:flex">
         <li>
-          <a href="index.html" class="navigation__link">Página Principal</a>
+          <a href="../../../index.html" class="navigation__link">Página Principal</a>
         </li>
         <li>
           <a href="#" class="navigation__link">Documentários</a>
@@ -316,7 +329,7 @@
             <a href="">Terror</a>
             <a href="">Comédia</a>
             <a href="">Ação</a>
-            <a href="categorias.html">Drama</a>
+            <a href="../../../categorias.html">Drama</a>
           </div>
         </li> <!-- FIM DA LI DO DROPWDOWN (CONTÉUDO VISUAL SEM ESTILIZAÇÃO DO DROPDOWN)-->
         <!-- -------------------------------------------------------------------------------------------- -->
@@ -338,7 +351,7 @@
           <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSConfig0)" />
         </svg>
         <!-- LOGIN -->
-        <a href="conteudos/assets/login.html">
+        <a href="../login.html">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path fill="currentColor" fill-rule="evenodd"
               d="M8 7a4 4 0 1 1 8 0a4 4 0 0 1-8 0Zm0 6a5 5 0 0 0-5 5a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3a5 5 0 0 0-5-5H8Z"
@@ -380,22 +393,19 @@
       <div class="main__info"> <!-- INÍCIO DA DIV CLASSE MAIN__INFO -->
 
         <!-- TEXTOS DA SINOPSE E TÍTULO-->
-        <h1 style="margin-bottom: -2rem;" class="font-extrabold text-[400%] font-luckiest">Dois</h1>
-        <h1 style="margin-bottom: 0.500rem;" class="font-extrabold text-[400%] font-luckiest">Tempos</h1>
+        <h1 style="margin-bottom: 0.500rem;" class="font-extrabold text-[400%] font-luckiest">Raimodula</h1>
+        <!-- <h1 style="margin-bottom: 0.500rem;" class="font-extrabold text-[400%] font-luckiest">Tempos</h1> -->
         <h4>
           <span>2023</span>
-          <span><i>+16</i></span>
-          <span>Série</span>
-          <span>Drama</span>
+          <span><i>+10</i></span>
+          <span>Jogo</span>
+          <span>Ação</span>
         </h4>
-        <p>Paz é a maior influencer brasileira de 2022, mas seu mundo cai quando ela é cancelada na internet. Cecília é
-          uma escritora lésbica de 1922 que se vê forçada a se casar com um homem. Sem perspectiva de escapar de seus
-          destinos, as garotas expressam o mesmo desejo de ser livre. O universo então decide ajudá-las: misteriosamente
-          elas viajam no tempo e acordam uma no corpo – e no século! – da outra.</p>
+        <p>Raimodula é um arcade de plataforma dinâmico, com personagens customizáveis e progressão em áreas definida aleatoriamente. Desbloqueie habilidades, enfrente inimigos modulares e navegue em cenários surreais com uma jogabilidade instensa e polida!</p>
         <!-- BOTÕES DE PLAY E FAVORITOS-->
         <div class="buttons">
-          <a href="https://www.starplus.com/pt-br/series/dois-tempos/FNIiW5nw9FXW"><i class="fa fa play" aria-hidden="true"></i> ▶
-            Assistir</a>
+          <a href="https://store.steampowered.com/app/2091300/Raimodula/?l=portuguese"><i class="fa fa play" aria-hidden="true"></i> ▶
+            Jogar</a>
           <a href="#"><i class="fa fa plus" aria-hidden="true"></i>+
             Favoritos</a>
         </div>
@@ -405,10 +415,7 @@
 
         <div class="lg:hidden mx-4 my-1 ml-0">
           <!-- Este bloco será exibido apenas em telas menores ou iguais a 648 pixels -->
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/Iq7cGJsGDs4?si=V2IPTRCEn9YS6Lf4"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <iframe width="100%" height="315px" src="https://cdn.akamai.steamstatic.com/steam/apps/256949891/movie_max_vp9.webm?t=1685480367"> </iframe>
         </div>
         <!-- FIM PARA TELAS MENORES OU IGUAIS A 648PX (ESSA CONFIG GARANTE QUE NESSAS DIMENSÕES AQUELA INCORPORAÇÃO QUE O PROFESSOR TINHA PEDIDO QUEBRE E JOGUE O TRAILER PRA BAIXO DOS BOTÕES DE PLAY E FAVORITOS)-->
         <!-- ----------------------------------------------------------- -->
@@ -418,35 +425,26 @@
         <div class="streaming"> <!-- INÍCIO DA DIV STREAMING -->
 
           <!-- TEXTO-->
-          <h2 class="mt-7 text-2xl sm:text-2xl text-white font-chicle mb-2">Transmissões</h2> <!-- FIM-->
+          <h2 class="mt-7 text-2xl sm:text-2xl text-white font-chicle mb-2">Onde jogar</h2> <!-- FIM-->
 
           <!-- A PRÓPRIA LOGO-->
-          <a href="https://www.starplus.com/pt-br" alt="Link Starplus"><svg version="1.1" id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 2500 713.7"
-              style="enable-background:new 0 0 2500 713.7" xml:space="preserve" width="150" height="'100">
-              <style>
-                .st0 {
-                  fill: #241c32
-                }
-              </style>
-              <g id="g101">
-                <path id="path935" class="st0"
-                  d="M2196.9 327.6V153.1h121.4v174.4H2500v116.3h-181.7v174h-121.4v-174h-182.2V327.6h182.2z" />
-                <path id="path11" class="st0"
-                  d="M1654.8 200.7h76.4c46 0 75.4 23.8 75.4 65.3 0 45.2-29.4 74.6-75.4 74.6h-76.4V200.7zm131.5 230.9c79.1-10.1 144.4-78.1 144.4-164.6 0-112.2-76.4-173.8-199.5-173.8h-198.7V658h122.4V431.6l151.8 226.2h141.6l-162-226.2z" />
-                <path id="polygon13" class="st0" d="M797.5 204.4V93.1H424.9v111.3h124.2v453.4h124.3V204.4z" />
-                <path id="path15" class="st0"
-                  d="M195 301c-36.8-16.6-50.7-34.9-50.7-58.8 0-27.7 23-50.7 59.8-49.7 32.1.8 57.1 18.3 74.6 59.8l105.8-47C355.2 130 295.4 85.9 198.9 85.9c-102.1 0-177.5 67.2-177.5 157.2 0 61.6 30.4 110.3 102.1 146.3l79.1 39.6c44 22.2 65.3 38.6 65.3 70.7 0 34.9-28.4 59.8-65.3 59.8-39.6 0-75.4-22.2-92-71.7L0 520c25.7 93 102.1 147.3 201.5 147.3 107.6 0 190.4-69 190.4-168.3 0-76.4-41.3-127-120.6-162.7L195 301z" />
-                <linearGradient id="path3144-6_1_" gradientUnits="userSpaceOnUse" x1="943.107" y1="1052.768"
-                  x2="1476.486" y2="519.879" gradientTransform="translate(-67.73 -354.317) scale(.9857)">
-                  <stop offset=".28" style="stop-color:#fa1660" />
-                  <stop offset=".78" style="stop-color:#ff7d17" />
-                </linearGradient>
-                <path id="path3144-6"
-                  d="M1499.3 272.4h-286.6L1124 0l-88.7 272.4H748.8l229.9 168.7s112.4-74 248.6-101.9c-200.9 148.3-310 295.4-310 295.4l-25.1 79.1L1124 545.4l231.9 168.3-88.5-272.6 231.9-168.7z"
-                  style="fill:url(#path3144-6_1_)" />
-              </g>
-            </svg></a> <!-- FIM DA LOGO DO SERVIÇO DE STREAMING-->
+        <a href="https://store.steampowered.com/?l=portuguese" alt="Link Starplus">
+            <svg width="70" height="70" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+                <path d="M2.56967 20.0269C4.30041 25.7964 9.65423 30 15.9906 30C23.7274 30 29.9995 23.7318 29.9995 16C29.9995 8.26803 23.7274 2 15.9906 2C8.56634 2 2.49151 7.77172 2.01172 15.0699C2.01172 17.1667 2.01172 18.0417 2.56967 20.0269Z" fill="url(#paint0_linear_87_8314)"/>
+                <path d="M15.2706 12.5629L11.8426 17.5395C11.0345 17.5028 10.221 17.7314 9.54572 18.1752L2.01829 15.0784C2.01829 15.0784 1.84411 17.9421 2.56999 20.0763L7.89147 22.2707C8.15866 23.464 8.97779 24.5107 10.1863 25.0142C12.1635 25.8398 14.4433 24.8988 15.2658 22.922C15.4799 22.4052 15.5797 21.8633 15.5652 21.3225L20.5904 17.8219C23.5257 17.8219 25.9114 15.4305 25.9114 12.4937C25.9114 9.55673 23.5257 7.16748 20.5904 7.16748C17.7553 7.16748 15.1117 9.64126 15.2706 12.5629ZM14.4469 22.5783C13.8103 24.1057 12.054 24.8303 10.5273 24.1946C9.82302 23.9014 9.29128 23.3642 8.98452 22.7237L10.7167 23.4411C11.8426 23.9098 13.1343 23.3762 13.6023 22.2514C14.0718 21.1254 13.5392 19.8324 12.4139 19.3637L10.6233 18.6222C11.3142 18.3603 12.0997 18.3507 12.8336 18.6559C13.5734 18.9635 14.1475 19.5428 14.4517 20.283C14.756 21.0233 14.7548 21.8404 14.4469 22.5783ZM20.5904 16.0434C18.6364 16.0434 17.0455 14.4511 17.0455 12.4937C17.0455 10.5379 18.6364 8.94518 20.5904 8.94518C22.5457 8.94518 24.1365 10.5379 24.1365 12.4937C24.1365 14.4511 22.5457 16.0434 20.5904 16.0434ZM17.9341 12.4883C17.9341 11.0159 19.127 9.82159 20.5964 9.82159C22.0671 9.82159 23.2599 11.0159 23.2599 12.4883C23.2599 13.9609 22.0671 15.1541 20.5964 15.1541C19.127 15.1541 17.9341 13.9609 17.9341 12.4883Z" fill="white"/>
+                <defs>
+                  <linearGradient id="paint0_linear_87_8314" x1="16.0056" y1="2" x2="16.0056" y2="30" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#111D2E"/>
+                    <stop offset="0.21248" stop-color="#051839"/>
+                    <stop offset="0.40695" stop-color="#0A1B48"/>
+                    <stop offset="0.5811" stop-color="#132E62"/>
+                    <stop offset="0.7376" stop-color="#144B7E"/>
+                    <stop offset="0.87279" stop-color="#136497"/>
+                    <stop offset="1" stop-color="#1387B8"/>
+                  </linearGradient>
+                </defs>
+            </svg>
+        </a> <!-- FIM DA LOGO DO SERVIÇO DE STREAMING-->
 
           <div class="app">
           </div>
@@ -458,10 +456,7 @@
 
           <div class="hidden lg:block float-right absolute w-6/12 max-w-[400px] right-[400px] top-[260px]">
             <!-- Este bloco será exibido apenas em telas maiores que 648 pixels -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Iq7cGJsGDs4?si=V2IPTRCEn9YS6Lf4"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen></iframe>
+            <iframe width="516" height="315px" src="https://cdn.akamai.steamstatic.com/steam/apps/256949891/movie_max_vp9.webm?t=1685480367"> </iframe>
           </div>
 
           <!-- FIM | JÁ ESSE IFRAME É O PADRÃO DE DESKTOP, ELE APARECE DO LADO DA SINOPSE, DIFERENTE DO OUTRO QUE, EM TELAS MENORES, ELE JOGA PŔA BAIXO -->
@@ -477,33 +472,37 @@
           <!-- IMAGENS DO CARROSSEL DE CARDS-->
           <div class="overflow-x-auto whitespace-nowrap p-4 rounded-lg mb-0 m-0">
             <div class="carrossel flex" style="margin-top: -20px;">
-              <a href="assets/series/bomdiaveronica.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/23/07/18/23/50/5022166.jpg" alt="Além do Guarda-Roupa" class="max-w-full h-auto">
+              <a href="https://store.steampowered.com/app/612390/Dandara_Trials_of_Fear_Edition/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://cdn2.unrealengine.com/egs-dandaratrialsoffearedition-longhathouse-s2-1200x1600-358b865e32d7.jpg" alt="Dandara" class="max-w-full h-auto">
               </a>
-              <a href="assets/series/historiasdeverao.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/14/04/28/17/35/010007.jpg" alt="Hoje é dia de Maria"
+              <a href="https://store.steampowered.com/app/1037130/Dandy_Ace/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202106/2601/KPiTDtKdxOiEj3WHYwKU0aPo.png" alt="Dandy Ace"
                   class="max-w-full h-auto">
               </a>
-              <a href="assets/series/temporadadeverao.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/14/04/08/15/51/357975.jpg" alt="Meu Pedacinho de Chão"
+              <a href="https://store.steampowered.com/app/251130/Chroma_Squad/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://cdn.awsli.com.br/300x300/1124/1124488/produto/77220653/e33782267c.jpg" alt="Chroma Squad"
                   class="max-w-full h-auto">
               </a>
-              <a href="assets/series/coisamaislinda.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/20/09/29/21/10/3757947.jpg" alt="Desalma" class="max-w-full h-auto">
+              <a href="https://store.steampowered.com/app/389140/Horizon_Chase_Turbo/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://cdn.awsli.com.br/600x450/1124/1124488/produto/55196550/c944026382.jpg" alt="Horizon Chase Turbo" class="max-w-full h-auto">
               </a>
-              <a href="assets/series/impuros.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="https://br.web.img3.acsta.net/c_310_420/pictures/21/01/20/17/31/5372090.jpg" alt="Cidade Invisível" class="max-w-full h-auto">
+              <a href="https://store.steampowered.com/app/829280/Kaze_and_the_Wild_Masks/?l=portuguese" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/71ngptGZ8NL._AC_UF1000,1000_QL80_.jpg" alt="Kaze and The Wild Mask" class="max-w-full h-auto">
               </a>
-              <a href="assets/series/milanomultiversi.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="conteudos/images/cards/milanomultiverso.jpg" alt="Mila no Multiverso" class="max-w-full h-auto">
+              <a href="https://store.steampowered.com/app/1094920/Hazel_Sky/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://par30games.net/wp-content/uploads/2022/07/Hazel-Sky-PC-Game.jpg" alt="Hazel sky" class="max-w-full h-auto">
               </a>
-              <a href="assets/series/oreidatv.html" class="p-n1 flex-shrink-0 mx-n1">
-                <img src="conteudos/images/cards/oreidatv.jpg" alt="O rei da TV" class="max-w-full h-auto">
+              <a href="https://store.steampowered.com/app/609110/Blazing_Chrome/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://criticalhits.com.br/wp-content/uploads/2019/07/blazing-chrome-cover-1.jpg" alt="Blazing Chrome" class="max-w-full h-auto">
               </a>
             </div> <!-- FIM DA DIV CARROSSEL FLEX-->
           </div> <!-- FIM IMAGENS DO CARROSSEL DE CARDS-->
 
           <!-- FIM CARROSSEL DE CARDS -->
+
+          <!--
+            FOOTER
+          -->
 
           <!-- ----------------------------------------------------------- -->
           <!-- FOOTER (DEIXEI NO BODY PORQUE ACHEI QUE FICOU LEGAL, MAS QUALQUER COISA SÓ TIRAR)-->
@@ -532,7 +531,7 @@
                 <div class="footer-col">
                   <h4>Atalhos</h4>
                   <ul>
-                    <li><a href="index.html">Página principal</a></li>
+                    <li><a href="../../../index.html">Página principal</a></li>
                     <li><a href="#">Categorias</a></li>
                     <li><a href="#">Lançamentos</a></li>
                     <li><a href="#">Melhores</a></li>
@@ -579,14 +578,14 @@
   -->
 
 <div class="logo-brasil">
-  <a href="index.html">
-    <img src="conteudos/images/logos/Logo sem fundo.png" alt="">
+  <a href="../../../index.html">
+    <img src="../../images/logos/Logo sem fundo.png" alt="">
   </a>
   
 </div>
 
 <div class="person-container">
-  <a href="conteudos/assets/login.html">
+  <a href="../login.html">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 45px; height: 50px; color: currentColor;">
       <path fill="currentColor"
         d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4" />

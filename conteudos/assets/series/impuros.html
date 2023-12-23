@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!--
+  HEAD (METADADOS)
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>Raimodula</title>
+  <link rel="icon" type="image/x-icon" href="../../images/favicons/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+  <!-- Imports CSS -->
+  <link rel="stylesheet" href="../input.css">
+  <link href="../output.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- JS -->
+  <!-- JIT SUPPORT, for using peer-* below -->
+  <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+  <!-- FIM Imports CSS -->
+
+  <!-- Imports FONTS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet"> 
+  <!-- FIM Imports FONTS-->
+
+  <!-- Imports TAILWIND-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <!-- FIM Imports TAILWIND-->
+
+  <!-- IMPORTS BOOTSTRAP ICONS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- FIM IMPORTS BOOTSTRAP ICONS-->
+
+  <!--
+    ------------------------------------------------
+    | ESTILIZAÇÃO DO MENU MOBILE (HAMBURGUER)
+    ------------------------------------------------
+  -->
+  <!-- ESTILOS DE CONFIGURAÇÃO DO MENU SIDEBAR -->
+  <style>
+    .sidebar.left-0 {
+      left: initial;
+      right: 5px;
+      z-index: 999;
+    }
+
+    .menu-icon {
+      position: absolute;
+      right: 5px;
+      /* ou ajuste para a posição desejada na direita */
+      top: 25px;
+      /* ou ajuste para a posição desejada para baixo */
+    }
+
+    .menu-icon i {
+      font-size: 49px;
+      /* Ajuste o tamanho do ícone conforme necessário */
+    }
+
+    .overflow-x-auto::-webkit-scrollbar {
+    height: 5px;
+    }
+
+    .overflow-x-auto::-webkit-scrollbar-track {
+    background: #114425; /* Cor de fundo da trilha */
+    border-radius: 10px;
+    }
+
+    .overflow-x-auto::-webkit-scrollbar-thumb {
+    background: #ffe600; /* Cor da alça (thumb) */
+    border-radius: 10px;
+    }
+
+    @media (min-width: 649px) {
+      .sidebar {
+        display: none;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+    }
+
+    .sidebar {
+      background-image: url('../../images/backgrounds/backgroundbremcenasidebar.png');
+      background-size: cover;
+      /* Ajusta a imagem para cobrir todo o fundo */
+      background-position: center;
+      /* Centraliza a imagem */
+    }
+  </style> <!-- FIM DO STYLE (ESTILIZAÇÃO DO MENU MOBILE)-->
+
+</head> <!-- FIM DOS METADADOS/ESTILIZAÇÃO-->
+
+
+<!--
+  BODY
+-->
+
+<!--
+    ------------------------------------------------
+    | CONFIGURAÇÃO DO MENU MOBILE (HAMBURGUER)
+    ------------------------------------------------
+-->
+
+<!-- ÍNICIO DO BODY TAILWIND -->
+
+<body class="bg-blue-600 font-[Poppins] relative">
+
+  <!--
+    SIDE BAR (MOBILE)
+  -->
+
+  <!-- ÍNICIO CONFIG DO ICON DO MENU (AS TRÊS BARRINHAS)-->
+  <span class="absolute text-white text-4xl cursor-pointer menu-icon" onclick="Openbar()">
+    <i class="bi bi-filter-left px-2 rounded-md menu-icon"></i> <!-- ICON-->
+  </span> <!-- FIM CONFIG DO ICON DO MENU (AS TRÊS BARRINHAS)-->
+
+  <!-- INÍCIO DA CONFIG MENU MOBILE VISUAL -->
+  <div class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] duration-1000
+    p-2 w-[300px] overflow-y-auto text-center bg-gray-900 shadow h-screen">
+    <div class="text-gray-100 text-xl">
+      <div class="p-2.5 mt-1 flex items-center rounded-md">
+        <i class="bi bi-x cursor-pointer lg:hidden" onclick="Openbar()"></i>
+        <h1 class="text-[15px] text-xl text-gray-200 font-bold">Menu </h1>
+        <iconify-icon icon="twemoji:flag-brazil" class="ml-auto text-xl"></iconify-icon>
+      </div>
+      <hr class="my-2 text-gray-600">
+
+
+      <div>
+        <div class="p-2.5 mt-3 flex items-center rounded-md 
+        px-4 duration-300 cursor-pointer  bg-black-700 border border-white">
+          <i class="bi bi-search text-sm"></i>
+          <input class="text-[15px] ml-4 w-full bg-transparent focus:outline-none" placeholder="Pesquisar" />
+        </div>
+        
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600 no-underline">
+          <i class="bi bi-house-door-fill"></i>
+          <a href="../../../index.html">
+            <span class="text-[17px] ml-4 text-gray-200">Página principal</span>
+          </a>         
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-bookmark-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Favoritos</span>
+        </div>
+
+        <hr class="my-4 text-gray-600">
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-heart-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Melhores filmes</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.578 3.578 0 0 0-.108-.563 2.22 2.22 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2.35 2.35 0 0 0-.16-.045 3.797 3.797 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.552 2.552 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526l.24-2.408Zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361.599.599.437 1.732-.36 2.531Z" />
+            <path
+              d="M5.205 10.787a7.632 7.632 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925Z" />
+          </svg>
+          <span class="text-[15px] ml-4 text-gray-200">Lançamentos de filmes</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-book-half"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Livros</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-tv"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Melhores Séries</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-dpad-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Novelas</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-file-earmark-person-fill"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Documentários</span>
+        </div>
+
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-controller"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Jogos</span>
+        </div>
+
+        <hr class="my-4 text-gray-600">
+        <div class="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-chat-left-text-fill"></i>
+          <div class="flex justify-between w-full items-center" onclick="dropDown()">
+            <span class="text-[15px] ml-4 text-gray-200">Contate-nos</span>
+            <span class="text-sm rotate-180" id="arrow">
+              <i class="bi bi-chevron-down"></i>
+            </span>
+          </div>
+        </div>
+        <div class="leading-7 text-left text-sm font-thin mt-2 w-4/5 mx-auto hidden" id="submenu">
+          <a href="mailto:dznamaral@gmail.com">
+            <h1 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Gmail</h1>
+          </a>
+          <a href="https://api.whatsapp.com/send/?phone=5583982018994&text&type=phone_number&app_absent=0">
+            <h1 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Whatsapp</h1>
+          </a>
+          <a href="https://www.instagram.com/amaraldsn/">
+            <h1 class="cursor-pointer p-2 hover:bg-blue-700 rounded-md mt-1">Instagram</h1>
+          </a>
+        </div>
+
+
+        <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer  hover:bg-green-600">
+          <i class="bi bi-box-arrow-in-right"></i>
+          <span class="text-[15px] ml-4 text-gray-200">Logout</span>
+        </div>
+
+      </div>
+    </div>
+  </div> <!-- FIM DA CONFIG VISUAL DO MENU MOBILE -->
+
+  <!--
+  ------------------------------------------------
+  | SCRIPT BÁSICO DO MENU HAMBURGUER (HAMBURGUER)
+  ------------------------------------------------
+  -->
+
+  <!-- INÍCIO DA CONFIG INTERATIVA DO MENU MOBILE -->
+  <script>
+    function dropDown() {
+      document.querySelector('#submenu').classList.toggle('hidden');
+      document.querySelector('#arrow').classList.toggle('rotate-0');
+    }
+
+    function Openbar() {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('left-0');
+    }
+
+  </script> <!-- FIM DA CONFIG INTERATIVA DO MENU MOBILE -->
+
+  <!--
+  ------------------------------------------------
+  | FUNDO DO BRASIL EM CENA
+  ------------------------------------------------
+  -->
+
+  <!-- CASO QUEIRA AJUSTAR A OPACIDADE DELE, ISAIAS OYU ANDREY, SÓ PEGAR A CLASSE E PROCURAR NO OUTPUT.CSS, E REGULAR. SE EU NÃO ME ENGANE, ESTÁ EM 0.9 A OPACITY-->
+  <div id="background" class="relative">
+    <!-- Imagem de fundo com opacidade máxima -->
+    <img src="https://images.gog-statics.com/2a59dfe1274bd96bcc8e47a3c3912273c33120424bd950f012c18df47f20aca1.jpg" class="papeldeparede">
+    <!-- Fundo preto com opacidade -->
+    <div class="black-overlay absolute inset-0 bg-black opacity-75"></div>
+  </div>
+  
+  <div id="background2" class="relative">
+    <!-- Bandeira do Brasil com opacidade reduzida -->
+    <img src="../../images/backgrounds/bandeiradobrasilmesclagem.png" class="papeldeparede2">
+  </div>
+
+  <div id="background3" class="relative">
+    <!-- Bandeira do Brasil com opacidade reduzida -->
+    <img src="../../images/backgrounds/black-color-solid-background-1920x1080.png" class="papeldeparede3">
+  </div>
+
+
+  <div id="app">
+
+    <!--
+      HEADER
+  -->
+
+    <header>
+
+      <!--
+      ------------------------------------------------
+      | NAVIGATION
+      ------------------------------------------------
+      -->
+      <a href="../../../index.html">
+        <img src="../../images/logos/Logo sem fundo.png" class="logobrasilemcena hidden md:block">
+      </a>
+      
+      <!-- AQUI É A LOGO QUE FICA NO CANTINHO (NO MENU DESKTOP, NO CASO)-->
+
+      <!-- ----------------------------------------------------------- -->
+      <!-- INÍCIO DA UL (NO CASO, TODA O TEXTO DA NAVEGAÇÃO SUPERIOR)-->
+      <ul class="navigation hidden md:flex">
+        <li>
+          <a href="../../../index.html" class="navigation__link">Página Principal</a>
+        </li>
+        <li>
+          <a href="#" class="navigation__link">Documentários</a>
+        </li>
+        <li>
+          <a href="#" class="navigation__link">Filmes</a>
+        </li>
+        <li>
+          <a href="#" class="navigation__link">Séries</a>
+        </li>
+        <li>
+          <a href="#" class="navigation__link">Livros</a>
+        </li>
+        <li>
+          <a href="#" class="navigation__link">Jogos</a>
+        </li>
+        <li>
+          <a href="#" class="navigation__link">Novelas</a>
+        </li>
+        <!-- ------------------------------------------------------------------------------------------- -->
+        <!-- DROPDOWN QUE, QUANDO PASSADO O MOUSE EM CIMA, EXIBE OUTRAS OPÇÕES DE CATEGORIAS-->
+        <li class="dropdown"> <!-- INÍCIO DA LI DO DROPWDOWN (CONTÉUDO VISUAL SEM ESTILIZAÇÃO DO DROPDOWN)-->
+          <a href="#" class="navigation__link">Categorias</a>
+          <div class="dropdown-menu">
+            <a href="">Terror</a>
+            <a href="">Comédia</a>
+            <a href="">Ação</a>
+            <a href="../../../categorias.html">Drama</a>
+          </div>
+        </li> <!-- FIM DA LI DO DROPWDOWN (CONTÉUDO VISUAL SEM ESTILIZAÇÃO DO DROPDOWN)-->
+        <!-- -------------------------------------------------------------------------------------------- -->
+
+      </ul> <!-- FIM DA UL (NO CASO, TODA O TEXTO DA NAVEGAÇÃO SUPERIOR)-->
+
+      <!-- ----------------------------------------------------------- -->
+      <!-- ICONES DA NAVEGAÇÃO, ICONÉ DE CONFIGURAÇÕES, LOGIN, ETC -->
+
+      <!-- CONFIGURAÇÕES -->
+      <div class="navigation__social hidden md:flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+          <mask id="ipSConfig0">
+            <g fill="none" stroke-linejoin="round" stroke-width="4">
+              <path fill="#fff" stroke="#fff" d="m24 4l-6 6h-8v8l-6 6l6 6v8h8l6 6l6-6h8v-8l6-6l-6-6v-8h-8l-6-6Z" />
+              <path fill="#000" stroke="#000" d="M24 30a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z" />
+            </g>
+          </mask>
+          <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSConfig0)" />
+        </svg>
+        <!-- LOGIN -->
+        <a href="../login.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M8 7a4 4 0 1 1 8 0a4 4 0 0 1-8 0Zm0 6a5 5 0 0 0-5 5a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3a5 5 0 0 0-5-5H8Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <!-- LUPA DE PESQUISA-->
+        <svg class="lupinha" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14z" />
+        </svg>
+        <!-- BANDEIRA DO BRASIL-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36">
+          <path fill="#009B3A" d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z" />
+          <path fill="#FEDF01" d="M32.728 18L18 29.124L3.272 18L18 6.875z" />
+          <circle cx="17.976" cy="17.924" r="6.458" fill="#002776" />
+          <path fill="#CBE9D4"
+            d="M12.277 14.887a6.406 6.406 0 0 0-.672 2.023c3.995-.29 9.417 1.891 11.744 4.595c.402-.604.7-1.28.883-2.004c-2.872-2.808-7.917-4.63-11.955-4.614z" />
+          <path fill="#88C9F9" d="M12 18.233h1v1h-1zm1 2h1v1h-1z" />
+          <path fill="#55ACEE" d="M15 18.233h1v1h-1zm2 1h1v1h-1zm4 2h1v1h-1zm-3 1h1v1h-1zm3-6h1v1h-1z" />
+          <path fill="#3B88C3" d="M19 20.233h1v1h-1z" />
+        </svg>
+      </div>
+
+      <!-- FIM ICONES DA NAVEGAÇÃO, ICONÉ DE CONFIGURAÇÕES, LOGIN, ETC -->
+
+    </header> <!-- FIM DA HEADER-->
+
+    <!--
+      MAIN
+    -->
+    <main>
+
+      <!--
+      ------------------------------------------------
+      | CORPO DO SITE
+      ------------------------------------------------
+      -->
+      <div class="main__info"> <!-- INÍCIO DA DIV CLASSE MAIN__INFO -->
+
+        <!-- TEXTOS DA SINOPSE E TÍTULO-->
+        <h1 style="margin-bottom: 0.500rem;" class="font-extrabold text-[400%] font-luckiest">Raimodula</h1>
+        <!-- <h1 style="margin-bottom: 0.500rem;" class="font-extrabold text-[400%] font-luckiest">Tempos</h1> -->
+        <h4>
+          <span>2023</span>
+          <span><i>+10</i></span>
+          <span>Série</span>
+          <span>Ação</span>
+        </h4>
+        <p>Raimodula é um arcade de plataforma dinâmico, com personagens customizáveis e progressão em áreas definida aleatoriamente. Desbloqueie habilidades, enfrente inimigos modulares e navegue em cenários surreais com uma jogabilidade instensa e polida!</p>
+        <!-- BOTÕES DE PLAY E FAVORITOS-->
+        <div class="buttons">
+          <a href="https://store.steampowered.com/app/2091300/Raimodula/?l=portuguese"><i class="fa fa play" aria-hidden="true"></i> ▶
+            Jogar</a>
+          <a href="#"><i class="fa fa plus" aria-hidden="true"></i>+
+            Favoritos</a>
+        </div>
+
+        <!-- ----------------------------------------------------------- -->
+        <!-- IFRAME PARA TELAS MENORES OU IGUAIS A 648PX (ESSA CONFIG GARANTE QUE NESSAS DIMENSÕES AQUELA INCORPORAÇÃO QUE O PROFESSOR TINHA PEDIDO QUEBRE E JOGUE O TRAILER PRA BAIXO DOS BOTÕES DE PLAY E FAVORITOS)-->
+
+        <div class="lg:hidden mx-4 my-1 ml-0">
+          <!-- Este bloco será exibido apenas em telas menores ou iguais a 648 pixels -->
+          <iframe width="100%" height="315px" src="https://cdn.akamai.steamstatic.com/steam/apps/256949891/movie_max_vp9.webm?t=1685480367"> </iframe>
+        </div>
+        <!-- FIM PARA TELAS MENORES OU IGUAIS A 648PX (ESSA CONFIG GARANTE QUE NESSAS DIMENSÕES AQUELA INCORPORAÇÃO QUE O PROFESSOR TINHA PEDIDO QUEBRE E JOGUE O TRAILER PRA BAIXO DOS BOTÕES DE PLAY E FAVORITOS)-->
+        <!-- ----------------------------------------------------------- -->
+
+        <!-- PARTE DE STREAMING (LOGO DO STARPLUS) -->
+
+        <div class="streaming"> <!-- INÍCIO DA DIV STREAMING -->
+
+          <!-- TEXTO-->
+          <h2 class="mt-7 text-2xl sm:text-2xl text-white font-chicle mb-2">Transmissões</h2> <!-- FIM-->
+
+          <!-- A PRÓPRIA LOGO-->
+          <a href="https://www.starplus.com/pt-br" alt="Link Starplus">
+            <svg width="70" height="70" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+              
+            </svg>
+          </a> <!-- FIM DA LOGO DO SERVIÇO DE STREAMING-->
+
+          <div class="app">
+          </div>
+
+
+
+          <!-- ------------------------------------------------------------------------------------------------------------ -->
+          <!-- JÁ ESSE IFRAME É O PADRÃO DE DESKTOP, ELE APARECE DO LADO DA SINOPSE, DIFERENTE DO OUTRO QUE, EM TELAS MENORES, ELE JOGA PŔA BAIXO -->
+
+          <div class="hidden lg:block float-right absolute w-6/12 max-w-[400px] right-[400px] top-[260px]">
+            <!-- Este bloco será exibido apenas em telas maiores que 648 pixels -->
+            <iframe width="516" height="315px" src="https://cdn.akamai.steamstatic.com/steam/apps/256949891/movie_max_vp9.webm?t=1685480367"> </iframe>
+          </div>
+
+          <!-- FIM | JÁ ESSE IFRAME É O PADRÃO DE DESKTOP, ELE APARECE DO LADO DA SINOPSE, DIFERENTE DO OUTRO QUE, EM TELAS MENORES, ELE JOGA PŔA BAIXO -->
+          <!-- ------------------------------------------------------------------------------------------------------------- -->
+
+
+
+          <!-- CARROSSEL DE CARDS -->
+
+          <!-- TEXTO-->
+          <h2 class="text-2xl sm:text-2xl text-white font-chicle mb-0">Você vai gostar ➜</h2>
+
+          <!-- IMAGENS DO CARROSSEL DE CARDS-->
+          <div class="overflow-x-auto whitespace-nowrap p-4 rounded-lg mb-0 m-0">
+            <div class="carrossel flex" style="margin-top: -20px;">
+              <a href="https://store.steampowered.com/app/612390/Dandara_Trials_of_Fear_Edition/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://cdn2.unrealengine.com/egs-dandaratrialsoffearedition-longhathouse-s2-1200x1600-358b865e32d7.jpg" alt="Dandara" class="max-w-full h-auto">
+              </a>
+              <a href="https://store.steampowered.com/app/1037130/Dandy_Ace/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202106/2601/KPiTDtKdxOiEj3WHYwKU0aPo.png" alt="Dandy Ace"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="https://store.steampowered.com/app/251130/Chroma_Squad/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://cdn.awsli.com.br/300x300/1124/1124488/produto/77220653/e33782267c.jpg" alt="Chroma Squad"
+                  class="max-w-full h-auto">
+              </a>
+              <a href="https://store.steampowered.com/app/389140/Horizon_Chase_Turbo/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://cdn.awsli.com.br/600x450/1124/1124488/produto/55196550/c944026382.jpg" alt="Horizon Chase Turbo" class="max-w-full h-auto">
+              </a>
+              <a href="https://store.steampowered.com/app/829280/Kaze_and_the_Wild_Masks/?l=portuguese" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://m.media-amazon.com/images/I/71ngptGZ8NL._AC_UF1000,1000_QL80_.jpg" alt="Kaze and The Wild Mask" class="max-w-full h-auto">
+              </a>
+              <a href="https://store.steampowered.com/app/1094920/Hazel_Sky/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://par30games.net/wp-content/uploads/2022/07/Hazel-Sky-PC-Game.jpg" alt="Hazel sky" class="max-w-full h-auto">
+              </a>
+              <a href="https://store.steampowered.com/app/609110/Blazing_Chrome/" class="p-n1 flex-shrink-0 mx-n1">
+                <img src="https://criticalhits.com.br/wp-content/uploads/2019/07/blazing-chrome-cover-1.jpg" alt="Blazing Chrome" class="max-w-full h-auto">
+              </a>
+            </div> <!-- FIM DA DIV CARROSSEL FLEX-->
+          </div> <!-- FIM IMAGENS DO CARROSSEL DE CARDS-->
+
+          <!-- FIM CARROSSEL DE CARDS -->
+
+          <!--
+            FOOTER
+          -->
+
+          <!-- ----------------------------------------------------------- -->
+          <!-- FOOTER (DEIXEI NO BODY PORQUE ACHEI QUE FICOU LEGAL, MAS QUALQUER COISA SÓ TIRAR)-->
+
+          <footer class="footer">
+            <div class="container">
+              <div class="row">
+                <div class="footer-col">
+                  <h4>Equipe</h4>
+                  <ul>
+                    <li><a href="https://www.linkedin.com/in/natanael-amaral-a8661b264/">Natanael A.</a></li>
+                    <li><a href="">Andrey V.</a></li>
+                    <li><a href="https://www.linkedin.com/in/isaias-silva-viana-b80ba329a/">Isaias V.</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Utilitários</h4>
+                  <ul>
+                    <li><a href="https://github.com/amaraldzn/bremcena">Código fonte</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Atalhos</h4>
+                  <ul>
+                    <li><a href="../../../index.html">Página principal</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Lançamentos</a></li>
+                    <li><a href="#">Melhores</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Siga-nos</h4>
+                  <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100094559876343"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/AmaralDzn"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/amaraldsn/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/natanael-amaral-a8661b264/"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </footer>
+          <!-- ----------------------------------------------------------- -->
+
+
+        </div> <!-- FIM DA DIV STREAMING -->
+
+      </div> <!-- FIM DA DIV CLASSE MAIN__INFO -->
+
+    </main>
+
+
+
+</body> <!-- ACABOU O BODY, FML-->
+
+<!--
+  ------------------------------------------------
+  | SCRIPT DO ICONIFY
+  ------------------------------------------------
+  -->
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+
+<!--
+  ------------------------------------------------
+  | ÍCONES DO MENU MOBILE, NO CASO, É A LOGO DO BRASIL E O ICON DE LOGIN NO MOBILE QUE FICA NA NAV
+  ------------------------------------------------
+  -->
+
+<div class="logo-brasil">
+  <a href="../../../index.html">
+    <img src="../../images/logos/Logo sem fundo.png" alt="">
+  </a>
+  
+</div>
+
+<div class="person-container">
+  <a href="../login.html">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 45px; height: 50px; color: currentColor;">
+      <path fill="currentColor"
+        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4" />
+    </svg>
+  </a>
+
+</div>
+
+<!--
+  ------------------------------------------------
+  |FIM, VENCEMO FML ;)
+  ------------------------------------------------
+  -->
+
+
+</html>

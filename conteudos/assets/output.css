@@ -878,7 +878,7 @@ video {
 
 #background {
   position: fixed;
-  inset: 0px;
+  inset: 0;
   z-index: -1;
   height: 100vh;
   width: 100%;
@@ -887,10 +887,40 @@ video {
 #background img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.9;
+  object-fit: cover;
+  opacity: 0.9; /* Ajuste o valor conforme desejado */
 }
+
+#background2 {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+}
+
+#background2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.1; /* Ajuste o valor conforme desejado */
+}
+
+#background3 {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+}
+
+#background3 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.5; /* Ajuste o valor conforme desejado */
+}
+
 
 #overlay {
   position: fixed;

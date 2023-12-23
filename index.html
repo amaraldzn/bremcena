@@ -438,47 +438,45 @@
             CARROUSEL
           -->
           
-          <div class="carousel relative shadow-2xl bg-white">
-            <div class="carousel-inner relative overflow-hidden w-full">
-                <!--Slide 1-->
-                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-                <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                    <img src="paginaprincipal/images/carrossel/carrossel1.png" alt="" class="h-full w-full object-cover">
+          <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                 <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="paginaprincipal/images/carrossel/carrossel1.png" class="absolute block w-full h-full" alt="Turmadamônicalicoes">
                 </div>
-                <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-blue-600 hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-yellow-400 hover:bg-blue-700 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-                
-                <!--Slide 2-->
-                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                  <img src="paginaprincipal/images/carrossel/carrossel2.png" alt="" class="h-full w-full object-cover">
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="paginaprincipal/images/carrossel/carrossel2.png" class="absolute block w-full h-full" alt="Turmadamônicalicoes">
                 </div>
-                <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-blue-600 hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-yellow-400 hover:bg-blue-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label> 
-                
-                <!--Slide 3-->
-                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-                <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                  <img src="paginaprincipal/images/carrossel/carrossel3.png" alt="" class="h-full w-full object-cover">
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                  <img src="paginaprincipal/images/carrossel/carrossel3.png" class="absolute block w-full h-full" alt="Turmadamônicalicoes">
                 </div>
-                <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-blue-600 hover:bg-yellow-500 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-                <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-yellow-400 hover:bg-blue-600 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
-
-                <!-- Add additional indicators for each slide-->
-                <ol class="carousel-indicators">
-                  <li class="inline-block mr-3">
-                    <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-                  </li>
-                  <li class="inline-block mr-3">
-                    <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-                  </li>
-                  <li class="inline-block mr-3">
-                    <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-white hover:text-blue-700">•</label>
-                  </li>
-                </ol>
-                
-              </div>
-        </div> <!-- FIM DO CARROSSEL-->
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
 
 
         <!--
@@ -505,7 +503,7 @@
                 </h2>
                 <!-- <div class="absolute top-[376px] left-[1065px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Jogo</div> -->
                 <p class="text-gray-400 leading-relaxed">Raimodula: plataforma dinâmica com personagens customizáveis, progressão aleatória, habilidades desbloqueáveis, inimigos modulares e cenários surreais em jogabilidade intensa e polida.</p>
-                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Jogar agora</a>
+                <a href="conteudos/assets/jogos/raimodula.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Jogar agora</a>
               </div>
             </div> <!-- FIM DO CARD 2-->
 
@@ -516,7 +514,7 @@
                 <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2"> Invasão do P. do E.,</h2>
                 <!-- <div class="absolute top-[376px] left-[1517px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Livro</div> -->
                 <p class="text-gray-400 leading-relaxed">A Invasão do Povo do Espírito". Personagens como Gastón e Max conduzem uma trama intrigante, garantindo uma leitura única e envolvente, reminiscente de Machado de Assis.</p>
-                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Ler agora</a>
+                <a href="conteudos/assets/livros/ainvasaodopovodoespirito.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Ler agora</a>
               </div>
             </div> <!-- FIM DO CARD 3-->
 
@@ -527,7 +525,7 @@
                 <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2">Elis & Tom</h2>
                 <!-- <div class="absolute top-[781px] left-[613px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Filme</div> -->
                 <p class="text-gray-400 leading-relaxed">Documentário 'Elis & Tom' revela os bastidores da colaboração histórica entre Elis Regina e Tom Jobim em 1974, destacando desafios na produção do álbum.</p>
-                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
+                <a href="conteudos/assets/filmes/elis&tom.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
               </div>
             </div> <!-- FIM DO CARD 4 -->
 
@@ -538,7 +536,7 @@
                 <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2">Cabra M. P. Morrer.</h2>
                 <!-- <div class="absolute top-[781px] left-[1070px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Doc</div> -->
                 <p class="text-gray-400 leading-relaxed">Década de 60:João Pedro é assassinado. Filmagens interrompidas em 1964. Dezessete anos depois, diretor busca viúva e filhos, explorando as memórias da família camponesa durante o regime militar.</p>
-                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
+                <a href="conteudos/assets/documentarios/cabramarcadopramorrer.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
               </div>
             </div> <!-- FIM DO CARD 5 -->
 
@@ -549,7 +547,7 @@
                 <h2 class="text-xl sm:text-3xl text-white font-luckies mb-2">Pantanal</h2>
                 <!-- <div class="absolute top-[781px] left-[1497px] bg-blue-600 text-white py-1 px-2 rounded-lg font-semibold">Novela</div> -->
                 <p class="text-gray-400 leading-relaxed">Remake Pantanal: José Leôncio vai para o Pantanal, fica rico após morte do pai, esposa foge com filho. Filho volta, conflitos persistem. Apaixonado por Juma, moça selvagem, decide levá-la para o Rio.</p>
-                <a href="conteudos.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
+                <a href="conteudos/assets/novelas/pantanal.html" class="block bg-green-600 text-white py-2 px-4 rounded-lg font-semibold mt-4 hover:bg-yellow-300 focus:scale-95 transition-all duration-200 ease-out text-center">Assistir agora</a>
               </div>
             </div> <!-- FIM DO CARD 6 -->
         
@@ -558,7 +556,7 @@
 
           
         <div class="overflow-x-auto whitespace-nowrap p-4 rounded-lg">
-          <a href="/br/acao/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ação" onclick="genreClick('GPC', 'Gender path', 'CTA-Ação');">Ação</a>
+          <a href="categorias.html" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ação" onclick="genreClick('GPC', 'Gender path', 'CTA-Ação');">Drama</a>
           <a href="/br/terror/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Terror" onclick="genreClick('GPC', 'Gender path', 'CTA-Terror');">Terror</a>
           <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Ficção científica e fantasia</a>
           <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Romance</a>
@@ -568,7 +566,7 @@
           <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Educativo</a>
           <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Mistério</a>
           <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Documentário</a>
-          <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Drama</a>
+          <a href="" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Ação</a>
           <a href="/br/ficcao-cientifica-e-fantasia/netflix" class="gpc__genre text-center roboto inline-block px-4 py-2 m-2 bg-blue-600 text-white rounded-md" data-name="Ficção científica e fantasia" onclick="genreClick('GPC', 'Gender path', 'CTA-Ficção científica e fantasia');">Faroeste</a>
           <!-- Adicione mais botões conforme necessário -->
         </div>
