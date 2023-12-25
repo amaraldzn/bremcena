@@ -37,9 +37,9 @@ Para executar este projeto localmente, siga as etapas abaixo:
 ## :soon: Implementação futura
 * Aplicações com JavaScript
 
-## 🤝 Colaboradores
+## 🤝 Criadores
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+Eu, Natanael, agradeço às seguintes pessoas que contribuíram para este projeto (além de mim mesmo, rs):
 
 <table>
   <tr>
@@ -53,7 +53,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="https://www.linkedin.com/in/isaias-silva-viana-b80ba329a/" title="Perfil do Linkedin">
-        <img src="https://i.pinimg.com/474x/65/86/a9/6586a95db3ad6c4ce77c0e8cda200b54.jpg" width="100px;" alt="Foto sem perfil"/><br>
+        <img src="https://media.licdn.com/dms/image/D5603AQHSaULNgNJpow/profile-displayphoto-shrink_800_800/0/1699720538892?e=1709164800&v=beta&t=6W1f4hPXmC3yugInVXryo2N-dh8vtUNd-qWnQ0mAkeg" width="100px;" alt="Foto sem perfil"/><br>
         <sub>
           <b>Isaias V.</b>
         </sub>
