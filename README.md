@@ -1,5 +1,7 @@
 <h1 align="center">🇧🇷 BRASIL EM CENA 🇧🇷 </h1>
 
+<img src="https://raw.githubusercontent.com/amaraldzn/bremcena/main/capagithubbrasil.png" alt="capabrasilemcenareadme">
+
 ## :memo: Descrição
 O projeto Brasil em Cena surgiu devido a requisição de realização de algum projeto na matéria de Linguagem de Marcação, no curso de Sistemas para Internet (IFPB), que utilizasse HTML/CSS e alguma biblioteca, como o Tailwind ou Bootstrap. Eu, Natanael, juntamente da minha equipe, Andrey e Isaias, tivemos a ideia de criar um site que propagasse as mídias, games e conteúdos audiovisuais do nosso Brasil. Em outras palavras, o principal objetivo do projeto é reunir filmes, séries, jogos, novelas, documentários e livros de pura nacionaliade, ou seja, todos sendo conteúdos brasileiros | 24/12/2023 - 22:27: Este projeto está sendo continuado por mim, Natanael, pois, além do conhecimentoa adquirido na realização do projeto, vi que há uma necessidade de algum projeto assim, portanto, resolvi dar continuidade. Os planos que tenho para o futuro é, sobretudo, melhorar o layout da paǵina, trazendo uma estrutura visual mais harmônica e agradável ao usuaŕio final, além de mais implementações com JavaScript, e outras bibliotecas/frameworks. 
 
@@ -47,7 +49,7 @@ Eu, Natanael, agradeço às seguintes pessoas que contribuíram para este projet
       <a href="https://github.com/amaraldzn" title="Perfil do Github">
         <img src="https://github.com/amaraldzn.png" width="100px;" alt="Foto do Amaral"/><br>
         <sub>
-          <b>Iuri Silva</b>
+          <b>Amaral Dzn</b>
         </sub>
       </a>
     </td>
